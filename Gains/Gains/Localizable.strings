@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Gains
+
+  Created by Vidushi Ojha on 11/10/17.
+  Copyright © 2017 Vidushi Ojha. All rights reserved.
+*/
+
+// Landing Page
+
+"WELCOME" = "Welcome to Gains!";
+"VIEW_STATS" = "View Stats";
+"ADD_EXERCISE" = "Add New Exercise";
