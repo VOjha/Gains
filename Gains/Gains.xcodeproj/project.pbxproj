@@ -19,6 +19,10 @@
 		A60401341FB6753900E2E4DF /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60401331FB6753900E2E4DF /* Rubik-Bold.ttf */; };
 		A60401361FB67EE100E2E4DF /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60401351FB67EE100E2E4DF /* Rubik-Light.ttf */; };
 		A60401381FB67EEE00E2E4DF /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60401371FB67EEE00E2E4DF /* Rubik-Regular.ttf */; };
+		A604013B1FB686CC00E2E4DF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604013A1FB686CC00E2E4DF /* Exercise.swift */; };
+		A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604013C1FB6876F00E2E4DF /* WeightExercise.swift */; };
+		A604013F1FBA27EC00E2E4DF /* CardioExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604013E1FBA27EC00E2E4DF /* CardioExercise.swift */; };
+		A60401411FBA29C100E2E4DF /* StretchExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401401FBA29C100E2E4DF /* StretchExercise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		A60401331FB6753900E2E4DF /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		A60401351FB67EE100E2E4DF /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		A60401371FB67EEE00E2E4DF /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		A604013A1FB686CC00E2E4DF /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		A604013C1FB6876F00E2E4DF /* WeightExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightExercise.swift; sourceTree = "<group>"; };
+		A604013E1FBA27EC00E2E4DF /* CardioExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioExercise.swift; sourceTree = "<group>"; };
+		A60401401FBA29C100E2E4DF /* StretchExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchExercise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 				A604011B1FB6502D00E2E4DF /* Info.plist */,
 				A604012C1FB66A5500E2E4DF /* Localizable.strings */,
 				A604012E1FB66DA700E2E4DF /* Helpers */,
+				A60401391FB685E300E2E4DF /* Models */,
 				A60401211FB650F800E2E4DF /* View Controllers */,
 				A604010F1FB6502C00E2E4DF /* AppDelegate.swift */,
 				A60401181FB6502D00E2E4DF /* LaunchScreen.storyboard */,
@@ -131,6 +140,17 @@
 				A60401371FB67EEE00E2E4DF /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A60401391FB685E300E2E4DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A604013A1FB686CC00E2E4DF /* Exercise.swift */,
+				A604013C1FB6876F00E2E4DF /* WeightExercise.swift */,
+				A604013E1FBA27EC00E2E4DF /* CardioExercise.swift */,
+				A60401401FBA29C100E2E4DF /* StretchExercise.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +232,12 @@
 			files = (
 				A60401301FB66DC600E2E4DF /* LocalizationHelper.swift in Sources */,
 				A60401241FB6512700E2E4DF /* LandingPageViewController.swift in Sources */,
+				A604013B1FB686CC00E2E4DF /* Exercise.swift in Sources */,
 				A60401101FB6502C00E2E4DF /* AppDelegate.swift in Sources */,
 				A604012A1FB6535B00E2E4DF /* NewExerciseViewController.swift in Sources */,
+				A60401411FBA29C100E2E4DF /* StretchExercise.swift in Sources */,
+				A604013F1FBA27EC00E2E4DF /* CardioExercise.swift in Sources */,
+				A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

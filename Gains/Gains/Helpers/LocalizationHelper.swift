@@ -6,7 +6,6 @@
 //  Copyright © 2017 Vidushi Ojha. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 func setLocalizedTextForViews(_ views: [UIView]) {
