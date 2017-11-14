@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomDatePicker" customModule="Gains" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="yNw-gz-YIa"/>
+                <outlet property="pickerView" destination="AKv-M9-5ZI" id="xoF-fm-x78"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,7 +26,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </pickerView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="AKv-M9-5ZI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Tgv-XB-Ok5"/>
                 <constraint firstItem="AKv-M9-5ZI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="cXZ-th-xYL"/>

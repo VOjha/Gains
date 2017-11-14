@@ -30,13 +30,13 @@ class LandingPageViewController: UIViewController {
     setLocalizedTextForViews(self.textItems!)
 
     // Welcome Label
-    welcomeLabel.font = UIFont(name: "Rubik-Bold", size: 30)
+    welcomeLabel.font = Fonts.landingPageTitleFont
     welcomeLabel.textColor = Colors.themeRedColor
 
     // Buttons
-    viewStatsButton.titleLabel!.font = UIFont(name: "Rubik-Regular", size: 20)
-    newExerciseButton.titleLabel!.font = UIFont(name: "Rubik-Regular", size: 20)
-    enterDataButton.titleLabel!.font = UIFont(name: "Rubik-Regular", size: 20)
+    viewStatsButton.titleLabel!.font = Fonts.buttonFont
+    newExerciseButton.titleLabel!.font = Fonts.buttonFont
+    enterDataButton.titleLabel!.font = Fonts.buttonFont
   }
 
   @IBAction func didClickNewExercise(_ sender: Any) {

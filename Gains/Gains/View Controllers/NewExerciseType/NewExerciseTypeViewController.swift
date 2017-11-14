@@ -30,13 +30,13 @@ class NewExerciseTypeViewController: UIViewController {
     setLocalizedTextForViews(self.textItems!)
 
     // Label
-    selectTypeLabel.font = UIFont(name: "Rubik-Bold", size: 25)
+    selectTypeLabel.font = Fonts.selectTypeTitleFont
     selectTypeLabel.textColor = Colors.themeRedColor
 
     // Buttons
-    cardioButton.titleLabel!.font = UIFont(name: "Rubik-Regular", size: 30)
-    stretchButton.titleLabel!.font = UIFont(name: "Rubik-Regular", size: 30)
-    weightButton.titleLabel!.font = UIFont(name: "Rubik-Regular", size: 30)
+    cardioButton.titleLabel!.font = Fonts.selectTypeLabelFont
+    stretchButton.titleLabel!.font = Fonts.selectTypeLabelFont
+    weightButton.titleLabel!.font = Fonts.selectTypeLabelFont
   }
 
   @IBAction func didClickCardio(_ sender: Any) {

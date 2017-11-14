@@ -21,3 +21,5 @@
 // Add New Exercise
 "EXERCISE_NAME" = "Exercise Name";
 "START_DATE" = "Date Started";
+"DURATION" = "Time Duration";
+"SAVE" = "Save & Continue";

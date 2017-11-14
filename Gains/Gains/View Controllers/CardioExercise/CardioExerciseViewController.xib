@@ -14,13 +14,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardioExerciseViewController" customModule="Gains" customModuleProvider="target">
             <connections>
                 <outlet property="cardioTypeLabel" destination="Vci-MS-hBB" id="Sen-11-Bau"/>
+                <outlet property="datePicker" destination="8GS-Ut-DvD" id="OEh-aN-uGv"/>
+                <outlet property="durationLabel" destination="Ib3-vB-63r" id="2UQ-Us-l9h"/>
                 <outlet property="exerciseNameLabel" destination="5C2-dv-M9J" id="luY-bg-8t9"/>
                 <outlet property="exerciseNameTextField" destination="Zc2-El-kK6" id="wva-Dw-D6R"/>
+                <outlet property="saveButton" destination="OBO-50-bUj" id="Nsw-20-k4q"/>
                 <outlet property="startDateLabel" destination="KwZ-gC-f6p" id="8AC-kD-7j6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="textItems" destination="Vci-MS-hBB" collectionClass="NSMutableArray" id="lDn-Yk-WIo"/>
                 <outletCollection property="textItems" destination="5C2-dv-M9J" collectionClass="NSMutableArray" id="JjU-Bs-crl"/>
                 <outletCollection property="textItems" destination="KwZ-gC-f6p" collectionClass="NSMutableArray" id="O6a-z3-iT8"/>
+                <outletCollection property="textItems" destination="OBO-50-bUj" collectionClass="NSMutableArray" id="Luw-t2-sTw"/>
+                <outletCollection property="textItems" destination="Ib3-vB-63r" collectionClass="NSMutableArray" id="JWO-bP-fYe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -84,6 +89,19 @@
                         <constraint firstAttribute="height" constant="1" id="qbD-jG-dCn"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib3-vB-63r" userLabel="Duration Label">
+                    <rect key="frame" x="40" y="504" width="295" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBO-50-bUj" userLabel="Save Button">
+                    <rect key="frame" x="-0.5" y="617" width="375" height="30"/>
+                    <state key="normal" title="SAVE"/>
+                    <connections>
+                        <action selector="didClickSave:" destination="-1" eventType="touchUpInside" id="d94-q9-Bq2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -92,14 +110,18 @@
                 <constraint firstItem="5C2-dv-M9J" firstAttribute="top" secondItem="PWl-Iw-gIW" secondAttribute="bottom" constant="70" id="6A7-nX-H5d"/>
                 <constraint firstItem="GzP-x4-LTn" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="6f5-pa-DdO"/>
                 <constraint firstItem="Zc2-El-kK6" firstAttribute="leading" secondItem="5C2-dv-M9J" secondAttribute="leading" id="BQo-X5-Ss4"/>
+                <constraint firstItem="Ib3-vB-63r" firstAttribute="top" secondItem="ObP-wZ-hjE" secondAttribute="bottom" constant="20" id="C9x-Tx-wyF"/>
                 <constraint firstItem="8GS-Ut-DvD" firstAttribute="leading" secondItem="KwZ-gC-f6p" secondAttribute="leading" id="D5t-eo-Brp"/>
                 <constraint firstItem="PWl-Iw-gIW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="DhF-Or-goe"/>
                 <constraint firstItem="KwZ-gC-f6p" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="FgI-aJ-cr7"/>
                 <constraint firstItem="PWl-Iw-gIW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="NF6-n4-M17"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vci-MS-hBB" secondAttribute="trailing" id="QLU-Qw-Y0S"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" constant="40" id="RZV-tu-aLd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OBO-50-bUj" secondAttribute="bottom" constant="20" id="T35-eO-z7G"/>
                 <constraint firstItem="ObP-wZ-hjE" firstAttribute="trailing" secondItem="KwZ-gC-f6p" secondAttribute="trailing" id="TWT-yg-WAv"/>
                 <constraint firstItem="8GS-Ut-DvD" firstAttribute="trailing" secondItem="KwZ-gC-f6p" secondAttribute="trailing" id="VoT-tY-3ft"/>
+                <constraint firstItem="OBO-50-bUj" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Z5r-78-lVB"/>
+                <constraint firstItem="Ib3-vB-63r" firstAttribute="leading" secondItem="KwZ-gC-f6p" secondAttribute="leading" id="a39-pk-K8V"/>
                 <constraint firstItem="KwZ-gC-f6p" firstAttribute="leading" secondItem="5C2-dv-M9J" secondAttribute="leading" id="caE-DH-T4z"/>
                 <constraint firstItem="Zc2-El-kK6" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="cv4-Gg-bkI"/>
                 <constraint firstItem="5C2-dv-M9J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="eKG-rW-sGZ"/>
@@ -109,7 +131,9 @@
                 <constraint firstItem="ObP-wZ-hjE" firstAttribute="leading" secondItem="KwZ-gC-f6p" secondAttribute="leading" id="hTd-LV-4ZC"/>
                 <constraint firstItem="GzP-x4-LTn" firstAttribute="leading" secondItem="5C2-dv-M9J" secondAttribute="leading" id="k1r-6k-Zd8"/>
                 <constraint firstItem="8GS-Ut-DvD" firstAttribute="top" secondItem="KwZ-gC-f6p" secondAttribute="bottom" id="kCO-JO-DYf"/>
+                <constraint firstItem="Ib3-vB-63r" firstAttribute="trailing" secondItem="KwZ-gC-f6p" secondAttribute="trailing" id="mEe-RK-na6"/>
                 <constraint firstItem="Vci-MS-hBB" firstAttribute="centerY" secondItem="PWl-Iw-gIW" secondAttribute="centerY" id="qfa-rp-AAr"/>
+                <constraint firstItem="OBO-50-bUj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="yHB-pI-Kf2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
