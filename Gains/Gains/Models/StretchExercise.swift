@@ -11,7 +11,17 @@ import UIKit
 var stretchType = ExerciseType(name: "Stretch", icon: UIImage(named: "stretch-icon")!)
 
 class StretchExercise: Exercise {
+  var stretches: [NSDate: [String: CGFloat]]
+
   init(name: String) {
-    super.init(name: name, type: cardioType)
+    self.stretches = [NSDate: [String: CGFloat]]()
+    super.init(name: name, type: stretchType)
+  }
+
+  func addDataPoint(date: NSDate, sets: CGFloat, reps: CGFloat) {
+    var data = [String: CGFloat]()
+    data["sets"] = sets
+    data["reps"] = reps
+    self.stretches[date] = data
   }
 }

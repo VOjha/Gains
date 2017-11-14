@@ -11,10 +11,18 @@ import UIKit
 var weightType = ExerciseType(name: "Weight", icon: UIImage(named: "weight-icon")!)
 
 class WeightExercise: Exercise {
-  var weight: CGFloat
+  var weights: [NSDate: [String: CGFloat]]
 
-  init(name: String, weight: CGFloat) {
-    self.weight = weight
+  init(name: String) {
+    self.weights = [NSDate: [String: CGFloat]]()
     super.init(name: name, type: weightType)
+  }
+
+  func addDataPoint(date: NSDate, weight: CGFloat, sets: CGFloat, reps: CGFloat) {
+    var data = [String: CGFloat]()
+    data["weight"] = weight
+    data["sets"] = sets
+    data["reps"] = reps
+    self.weights[date] = data;
   }
 }

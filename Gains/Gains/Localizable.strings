@@ -7,7 +7,17 @@
 */
 
 // Landing Page
-
 "WELCOME" = "Welcome to Gains!";
 "VIEW_STATS" = "View Stats";
 "ADD_EXERCISE" = "Add New Exercise";
+"ENTER_DATA" = "Enter Workout Data";
+
+// Exercise Types Page
+"SELECT_TYPE" = "Select Exercise Type";
+"CARDIO_TYPE" = "Cardio";
+"STRETCH_TYPE" = "Stretch";
+"WEIGHT_TYPE" = "Weight";
+
+// Add New Exercise
+"EXERCISE_NAME" = "Exercise Name";
+"START_DATE" = "Date Started";

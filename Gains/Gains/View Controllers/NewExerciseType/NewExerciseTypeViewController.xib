@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewExerciseTypeViewController" customModule="Gains" customModuleProvider="target">
+            <connections>
+                <outlet property="cardioButton" destination="Oud-hT-zVj" id="HSC-lQ-3yB"/>
+                <outlet property="selectTypeLabel" destination="czh-w1-JyD" id="bSb-g9-zJ0"/>
+                <outlet property="stretchButton" destination="Jsr-hX-1ZQ" id="Rf6-q6-Jnq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weightButton" destination="LIG-IM-QDO" id="UtR-0T-Nhb"/>
+                <outletCollection property="textItems" destination="Oud-hT-zVj" collectionClass="NSMutableArray" id="VZc-Eg-CYu"/>
+                <outletCollection property="textItems" destination="Jsr-hX-1ZQ" collectionClass="NSMutableArray" id="gC6-e9-qwf"/>
+                <outletCollection property="textItems" destination="LIG-IM-QDO" collectionClass="NSMutableArray" id="T2Y-v4-u8G"/>
+                <outletCollection property="textItems" destination="czh-w1-JyD" collectionClass="NSMutableArray" id="glQ-Cl-TAc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT_TYPE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czh-w1-JyD" userLabel="Select Exercise Type Label">
+                    <rect key="frame" x="0.0" y="40" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardio-icon" translatesAutoresizingMaskIntoConstraints="NO" id="HDA-Cd-snc" userLabel="Cardio Type Image View">
+                    <rect key="frame" x="55" y="118.5" width="100" height="100"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-hT-zVj" userLabel="Cardio Button">
+                    <rect key="frame" x="175" y="153" width="170" height="30"/>
+                    <state key="normal" title="CARDIO_TYPE"/>
+                    <connections>
+                        <action selector="didClickCardio:" destination="-1" eventType="touchUpInside" id="r23-ri-XHn"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stretch-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Gc5-vS-KqD" userLabel="Stretch Type Image View">
+                    <rect key="frame" x="55" y="293.5" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Gc5-vS-KqD" secondAttribute="height" multiplier="1:1" id="GFp-Hp-3q0"/>
+                        <constraint firstAttribute="height" constant="100" id="sWu-SX-jQJ"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsr-hX-1ZQ" userLabel="Stretch Button">
+                    <rect key="frame" x="175" y="328" width="170" height="30"/>
+                    <state key="normal" title="STRETCH_TYPE"/>
+                    <connections>
+                        <action selector="didClickStretch:" destination="-1" eventType="touchUpInside" id="cih-L8-EEr"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weight-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-Se-NtJ" userLabel="Weight Type Image View">
+                    <rect key="frame" x="55" y="468.5" width="100" height="100"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIG-IM-QDO" userLabel="Weight Button">
+                    <rect key="frame" x="175" y="503" width="170" height="30"/>
+                    <state key="normal" title="WEIGHT_TYPE"/>
+                    <connections>
+                        <action selector="didClickWeight:" destination="-1" eventType="touchUpInside" id="eIh-bM-fWB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jsr-hX-1ZQ" secondAttribute="trailing" constant="30" id="1QS-w4-prT"/>
+                <constraint firstItem="LIG-IM-QDO" firstAttribute="leading" secondItem="Jsr-hX-1ZQ" secondAttribute="leading" id="Bn3-ij-sGs"/>
+                <constraint firstItem="Jsr-hX-1ZQ" firstAttribute="leading" secondItem="Gc5-vS-KqD" secondAttribute="trailing" constant="20" id="C25-kJ-yJy"/>
+                <constraint firstItem="Jsr-hX-1ZQ" firstAttribute="centerY" secondItem="Gc5-vS-KqD" secondAttribute="centerY" id="Egd-dC-Syq"/>
+                <constraint firstItem="Jsr-hX-1ZQ" firstAttribute="trailing" secondItem="Oud-hT-zVj" secondAttribute="trailing" id="GF9-ek-YYI"/>
+                <constraint firstItem="Jsr-hX-1ZQ" firstAttribute="leading" secondItem="Oud-hT-zVj" secondAttribute="leading" id="JhA-zn-YTI"/>
+                <constraint firstItem="oFO-Se-NtJ" firstAttribute="top" secondItem="Gc5-vS-KqD" secondAttribute="bottom" constant="75" id="LRa-Bf-83R"/>
+                <constraint firstItem="Gc5-vS-KqD" firstAttribute="top" secondItem="HDA-Cd-snc" secondAttribute="bottom" constant="75" id="OsF-mf-l83"/>
+                <constraint firstItem="Gc5-vS-KqD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="55" id="SBd-Te-PCI"/>
+                <constraint firstItem="oFO-Se-NtJ" firstAttribute="leading" secondItem="Gc5-vS-KqD" secondAttribute="leading" id="Vzv-rC-bGD"/>
+                <constraint firstItem="LIG-IM-QDO" firstAttribute="centerY" secondItem="oFO-Se-NtJ" secondAttribute="centerY" id="ZXA-qk-hCh"/>
+                <constraint firstItem="czh-w1-JyD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fKb-T4-8WQ"/>
+                <constraint firstItem="Gc5-vS-KqD" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="hDu-4h-VIn"/>
+                <constraint firstItem="HDA-Cd-snc" firstAttribute="height" secondItem="Gc5-vS-KqD" secondAttribute="height" id="hTX-8c-WNm"/>
+                <constraint firstItem="oFO-Se-NtJ" firstAttribute="height" secondItem="Gc5-vS-KqD" secondAttribute="height" id="i4e-92-oeG"/>
+                <constraint firstItem="LIG-IM-QDO" firstAttribute="trailing" secondItem="Jsr-hX-1ZQ" secondAttribute="trailing" id="iHV-Vj-j4s"/>
+                <constraint firstItem="oFO-Se-NtJ" firstAttribute="width" secondItem="Gc5-vS-KqD" secondAttribute="width" id="jFA-gX-eAI"/>
+                <constraint firstItem="Oud-hT-zVj" firstAttribute="centerY" secondItem="HDA-Cd-snc" secondAttribute="centerY" id="opW-ny-7bg"/>
+                <constraint firstItem="czh-w1-JyD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sRK-8C-ecH"/>
+                <constraint firstItem="czh-w1-JyD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="xos-Dx-3cW"/>
+                <constraint firstItem="HDA-Cd-snc" firstAttribute="leading" secondItem="Gc5-vS-KqD" secondAttribute="leading" id="y7n-8k-jhy"/>
+                <constraint firstItem="HDA-Cd-snc" firstAttribute="width" secondItem="Gc5-vS-KqD" secondAttribute="width" id="zP4-VJ-4QC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cardio-icon" width="256" height="256"/>
+        <image name="stretch-icon" width="256" height="256"/>
+        <image name="weight-icon" width="256" height="256"/>
+    </resources>
+</document>

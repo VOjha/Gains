@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardioExerciseViewController" customModule="Gains" customModuleProvider="target">
+            <connections>
+                <outlet property="cardioTypeLabel" destination="Vci-MS-hBB" id="Sen-11-Bau"/>
+                <outlet property="exerciseNameLabel" destination="5C2-dv-M9J" id="luY-bg-8t9"/>
+                <outlet property="exerciseNameTextField" destination="Zc2-El-kK6" id="wva-Dw-D6R"/>
+                <outlet property="startDateLabel" destination="KwZ-gC-f6p" id="8AC-kD-7j6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="textItems" destination="Vci-MS-hBB" collectionClass="NSMutableArray" id="lDn-Yk-WIo"/>
+                <outletCollection property="textItems" destination="5C2-dv-M9J" collectionClass="NSMutableArray" id="JjU-Bs-crl"/>
+                <outletCollection property="textItems" destination="KwZ-gC-f6p" collectionClass="NSMutableArray" id="O6a-z3-iT8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardio-icon" translatesAutoresizingMaskIntoConstraints="NO" id="PWl-Iw-gIW" userLabel="Cardio Type Image View">
+                    <rect key="frame" x="40" y="60" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PWl-Iw-gIW" secondAttribute="height" multiplier="1:1" id="BAt-Mj-Nyj"/>
+                        <constraint firstAttribute="height" constant="100" id="Z5u-H6-3My"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARDIO_TYPE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vci-MS-hBB" userLabel="Cardio Type Label">
+                    <rect key="frame" x="140" y="99.5" width="235" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE_NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C2-dv-M9J" userLabel="Exercise Name Label">
+                    <rect key="frame" x="40" y="230" width="295" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zc2-El-kK6" userLabel="Exercise Name Text Field">
+                    <rect key="frame" x="40" y="251" width="295" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="yS5-gn-HMQ"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzP-x4-LTn" userLabel="Exercise Name Underline View">
+                    <rect key="frame" x="40" y="291" width="295" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="4zl-4N-wzJ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START_DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-gC-f6p" userLabel="Start Date Label">
+                    <rect key="frame" x="40" y="312" width="295" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8GS-Ut-DvD" customClass="CustomDatePicker" customModule="Gains" customModuleProvider="target">
+                    <rect key="frame" x="40" y="333" width="295" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="yIO-KJ-fbT"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObP-wZ-hjE" userLabel="Start Date Underline View">
+                    <rect key="frame" x="40" y="483" width="295" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="qbD-jG-dCn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="GzP-x4-LTn" firstAttribute="top" secondItem="Zc2-El-kK6" secondAttribute="bottom" id="1kS-2o-tni"/>
+                <constraint firstItem="Vci-MS-hBB" firstAttribute="leading" secondItem="PWl-Iw-gIW" secondAttribute="trailing" id="4fC-ev-wVX"/>
+                <constraint firstItem="5C2-dv-M9J" firstAttribute="top" secondItem="PWl-Iw-gIW" secondAttribute="bottom" constant="70" id="6A7-nX-H5d"/>
+                <constraint firstItem="GzP-x4-LTn" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="6f5-pa-DdO"/>
+                <constraint firstItem="Zc2-El-kK6" firstAttribute="leading" secondItem="5C2-dv-M9J" secondAttribute="leading" id="BQo-X5-Ss4"/>
+                <constraint firstItem="8GS-Ut-DvD" firstAttribute="leading" secondItem="KwZ-gC-f6p" secondAttribute="leading" id="D5t-eo-Brp"/>
+                <constraint firstItem="PWl-Iw-gIW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="DhF-Or-goe"/>
+                <constraint firstItem="KwZ-gC-f6p" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="FgI-aJ-cr7"/>
+                <constraint firstItem="PWl-Iw-gIW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="NF6-n4-M17"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vci-MS-hBB" secondAttribute="trailing" id="QLU-Qw-Y0S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" constant="40" id="RZV-tu-aLd"/>
+                <constraint firstItem="ObP-wZ-hjE" firstAttribute="trailing" secondItem="KwZ-gC-f6p" secondAttribute="trailing" id="TWT-yg-WAv"/>
+                <constraint firstItem="8GS-Ut-DvD" firstAttribute="trailing" secondItem="KwZ-gC-f6p" secondAttribute="trailing" id="VoT-tY-3ft"/>
+                <constraint firstItem="KwZ-gC-f6p" firstAttribute="leading" secondItem="5C2-dv-M9J" secondAttribute="leading" id="caE-DH-T4z"/>
+                <constraint firstItem="Zc2-El-kK6" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="cv4-Gg-bkI"/>
+                <constraint firstItem="5C2-dv-M9J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="eKG-rW-sGZ"/>
+                <constraint firstItem="KwZ-gC-f6p" firstAttribute="top" secondItem="GzP-x4-LTn" secondAttribute="bottom" constant="20" id="evB-BN-XQC"/>
+                <constraint firstItem="ObP-wZ-hjE" firstAttribute="top" secondItem="8GS-Ut-DvD" secondAttribute="bottom" id="exI-V3-jqV"/>
+                <constraint firstItem="Zc2-El-kK6" firstAttribute="top" secondItem="5C2-dv-M9J" secondAttribute="bottom" id="fnq-nZ-YUi"/>
+                <constraint firstItem="ObP-wZ-hjE" firstAttribute="leading" secondItem="KwZ-gC-f6p" secondAttribute="leading" id="hTd-LV-4ZC"/>
+                <constraint firstItem="GzP-x4-LTn" firstAttribute="leading" secondItem="5C2-dv-M9J" secondAttribute="leading" id="k1r-6k-Zd8"/>
+                <constraint firstItem="8GS-Ut-DvD" firstAttribute="top" secondItem="KwZ-gC-f6p" secondAttribute="bottom" id="kCO-JO-DYf"/>
+                <constraint firstItem="Vci-MS-hBB" firstAttribute="centerY" secondItem="PWl-Iw-gIW" secondAttribute="centerY" id="qfa-rp-AAr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cardio-icon" width="256" height="256"/>
+    </resources>
+</document>

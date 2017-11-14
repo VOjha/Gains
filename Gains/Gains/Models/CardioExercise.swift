@@ -11,10 +11,14 @@ import UIKit
 var cardioType = ExerciseType(name: "Cardio", icon: UIImage(named: "cardio-icon")!)
 
 class CardioExercise: Exercise {
-  var time: CGFloat
+  var times: [NSDate: CGFloat]
 
-  init(name: String, time: CGFloat) {
-    self.time = time
+  init(name: String) {
+    self.times = [NSDate: CGFloat]()
     super.init(name: name, type: cardioType)
+  }
+
+  func addDataPoint(date: NSDate, minutes: CGFloat, seconds: CGFloat) {
+    self.times[date] = minutes + (seconds/60.0)
   }
 }

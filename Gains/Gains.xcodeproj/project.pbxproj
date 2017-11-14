@@ -12,8 +12,8 @@
 		A604011A1FB6502D00E2E4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60401181FB6502D00E2E4DF /* LaunchScreen.storyboard */; };
 		A60401241FB6512700E2E4DF /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401221FB6512700E2E4DF /* LandingPageViewController.swift */; };
 		A60401251FB6512700E2E4DF /* LandingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401231FB6512700E2E4DF /* LandingPageViewController.xib */; };
-		A604012A1FB6535B00E2E4DF /* NewExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401281FB6535B00E2E4DF /* NewExerciseViewController.swift */; };
-		A604012B1FB6535B00E2E4DF /* NewExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401291FB6535B00E2E4DF /* NewExerciseViewController.xib */; };
+		A604012A1FB6535B00E2E4DF /* NewExerciseTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401281FB6535B00E2E4DF /* NewExerciseTypeViewController.swift */; };
+		A604012B1FB6535B00E2E4DF /* NewExerciseTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401291FB6535B00E2E4DF /* NewExerciseTypeViewController.xib */; };
 		A604012D1FB66A5500E2E4DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A604012C1FB66A5500E2E4DF /* Localizable.strings */; };
 		A60401301FB66DC600E2E4DF /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604012F1FB66DC600E2E4DF /* LocalizationHelper.swift */; };
 		A60401341FB6753900E2E4DF /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60401331FB6753900E2E4DF /* Rubik-Bold.ttf */; };
@@ -23,6 +23,13 @@
 		A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604013C1FB6876F00E2E4DF /* WeightExercise.swift */; };
 		A604013F1FBA27EC00E2E4DF /* CardioExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604013E1FBA27EC00E2E4DF /* CardioExercise.swift */; };
 		A60401411FBA29C100E2E4DF /* StretchExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401401FBA29C100E2E4DF /* StretchExercise.swift */; };
+		A60401431FBA5C0600E2E4DF /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401421FBA5C0600E2E4DF /* Exercises.swift */; };
+		A60401461FBA63D700E2E4DF /* CardioExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401441FBA63D600E2E4DF /* CardioExerciseViewController.swift */; };
+		A60401471FBA63D700E2E4DF /* CardioExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401451FBA63D600E2E4DF /* CardioExerciseViewController.xib */; };
+		A604014A1FBA660300E2E4DF /* ConstantsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401491FBA660300E2E4DF /* ConstantsHelper.swift */; };
+		A604014C1FBA6E8B00E2E4DF /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A604014B1FBA6E8B00E2E4DF /* Rubik-Medium.ttf */; };
+		A60401541FBA75B400E2E4DF /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */; };
+		A60401561FBA75C100E2E4DF /* CustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +40,8 @@
 		A604011B1FB6502D00E2E4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60401221FB6512700E2E4DF /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		A60401231FB6512700E2E4DF /* LandingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandingPageViewController.xib; sourceTree = "<group>"; };
-		A60401281FB6535B00E2E4DF /* NewExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExerciseViewController.swift; sourceTree = "<group>"; };
-		A60401291FB6535B00E2E4DF /* NewExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewExerciseViewController.xib; sourceTree = "<group>"; };
+		A60401281FB6535B00E2E4DF /* NewExerciseTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExerciseTypeViewController.swift; sourceTree = "<group>"; };
+		A60401291FB6535B00E2E4DF /* NewExerciseTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewExerciseTypeViewController.xib; sourceTree = "<group>"; };
 		A604012C1FB66A5500E2E4DF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A604012F1FB66DC600E2E4DF /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
 		A60401331FB6753900E2E4DF /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -44,6 +51,13 @@
 		A604013C1FB6876F00E2E4DF /* WeightExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightExercise.swift; sourceTree = "<group>"; };
 		A604013E1FBA27EC00E2E4DF /* CardioExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioExercise.swift; sourceTree = "<group>"; };
 		A60401401FBA29C100E2E4DF /* StretchExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchExercise.swift; sourceTree = "<group>"; };
+		A60401421FBA5C0600E2E4DF /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
+		A60401441FBA63D600E2E4DF /* CardioExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioExerciseViewController.swift; sourceTree = "<group>"; };
+		A60401451FBA63D600E2E4DF /* CardioExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardioExerciseViewController.xib; sourceTree = "<group>"; };
+		A60401491FBA660300E2E4DF /* ConstantsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsHelper.swift; sourceTree = "<group>"; };
+		A604014B1FBA6E8B00E2E4DF /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePicker.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,7 @@
 				A604012C1FB66A5500E2E4DF /* Localizable.strings */,
 				A604012E1FB66DA700E2E4DF /* Helpers */,
 				A60401391FB685E300E2E4DF /* Models */,
+				A60401521FBA757200E2E4DF /* Templates */,
 				A60401211FB650F800E2E4DF /* View Controllers */,
 				A604010F1FB6502C00E2E4DF /* AppDelegate.swift */,
 				A60401181FB6502D00E2E4DF /* LaunchScreen.storyboard */,
@@ -92,7 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				A60401261FB6533400E2E4DF /* Landing */,
-				A60401271FB6533B00E2E4DF /* NewExercise */,
+				A60401271FB6533B00E2E4DF /* NewExerciseType */,
+				A60401481FBA63E300E2E4DF /* CardioExercise */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -106,19 +122,20 @@
 			path = Landing;
 			sourceTree = "<group>";
 		};
-		A60401271FB6533B00E2E4DF /* NewExercise */ = {
+		A60401271FB6533B00E2E4DF /* NewExerciseType */ = {
 			isa = PBXGroup;
 			children = (
-				A60401281FB6535B00E2E4DF /* NewExerciseViewController.swift */,
-				A60401291FB6535B00E2E4DF /* NewExerciseViewController.xib */,
+				A60401281FB6535B00E2E4DF /* NewExerciseTypeViewController.swift */,
+				A60401291FB6535B00E2E4DF /* NewExerciseTypeViewController.xib */,
 			);
-			path = NewExercise;
+			path = NewExerciseType;
 			sourceTree = "<group>";
 		};
 		A604012E1FB66DA700E2E4DF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				A604012F1FB66DC600E2E4DF /* LocalizationHelper.swift */,
+				A60401491FBA660300E2E4DF /* ConstantsHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -137,6 +154,7 @@
 			children = (
 				A60401331FB6753900E2E4DF /* Rubik-Bold.ttf */,
 				A60401351FB67EE100E2E4DF /* Rubik-Light.ttf */,
+				A604014B1FBA6E8B00E2E4DF /* Rubik-Medium.ttf */,
 				A60401371FB67EEE00E2E4DF /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
@@ -149,8 +167,27 @@
 				A604013C1FB6876F00E2E4DF /* WeightExercise.swift */,
 				A604013E1FBA27EC00E2E4DF /* CardioExercise.swift */,
 				A60401401FBA29C100E2E4DF /* StretchExercise.swift */,
+				A60401421FBA5C0600E2E4DF /* Exercises.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A60401481FBA63E300E2E4DF /* CardioExercise */ = {
+			isa = PBXGroup;
+			children = (
+				A60401441FBA63D600E2E4DF /* CardioExerciseViewController.swift */,
+				A60401451FBA63D600E2E4DF /* CardioExerciseViewController.xib */,
+			);
+			path = CardioExercise;
+			sourceTree = "<group>";
+		};
+		A60401521FBA757200E2E4DF /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */,
+				A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */,
+			);
+			path = Templates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,11 +252,14 @@
 				A604012D1FB66A5500E2E4DF /* Localizable.strings in Resources */,
 				A60401381FB67EEE00E2E4DF /* Rubik-Regular.ttf in Resources */,
 				A60401341FB6753900E2E4DF /* Rubik-Bold.ttf in Resources */,
+				A60401471FBA63D700E2E4DF /* CardioExerciseViewController.xib in Resources */,
 				A604011A1FB6502D00E2E4DF /* LaunchScreen.storyboard in Resources */,
+				A60401561FBA75C100E2E4DF /* CustomDatePicker.xib in Resources */,
 				A60401171FB6502D00E2E4DF /* Assets.xcassets in Resources */,
 				A60401251FB6512700E2E4DF /* LandingPageViewController.xib in Resources */,
 				A60401361FB67EE100E2E4DF /* Rubik-Light.ttf in Resources */,
-				A604012B1FB6535B00E2E4DF /* NewExerciseViewController.xib in Resources */,
+				A604012B1FB6535B00E2E4DF /* NewExerciseTypeViewController.xib in Resources */,
+				A604014C1FBA6E8B00E2E4DF /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,10 +271,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60401301FB66DC600E2E4DF /* LocalizationHelper.swift in Sources */,
+				A60401431FBA5C0600E2E4DF /* Exercises.swift in Sources */,
+				A60401461FBA63D700E2E4DF /* CardioExerciseViewController.swift in Sources */,
 				A60401241FB6512700E2E4DF /* LandingPageViewController.swift in Sources */,
 				A604013B1FB686CC00E2E4DF /* Exercise.swift in Sources */,
+				A604014A1FBA660300E2E4DF /* ConstantsHelper.swift in Sources */,
 				A60401101FB6502C00E2E4DF /* AppDelegate.swift in Sources */,
-				A604012A1FB6535B00E2E4DF /* NewExerciseViewController.swift in Sources */,
+				A604012A1FB6535B00E2E4DF /* NewExerciseTypeViewController.swift in Sources */,
+				A60401541FBA75B400E2E4DF /* CustomDatePicker.swift in Sources */,
 				A60401411FBA29C100E2E4DF /* StretchExercise.swift in Sources */,
 				A604013F1FBA27EC00E2E4DF /* CardioExercise.swift in Sources */,
 				A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */,
