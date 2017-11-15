@@ -43,6 +43,8 @@ class NewExerciseTypeViewController: UIViewController {
   }
 
   @IBAction func didClickWeight(_ sender: Any) {
+    let newWeightVC = WeightExerciseViewController()
+    self.navigationController?.pushViewController(newWeightVC, animated: true)
   }
 
 }

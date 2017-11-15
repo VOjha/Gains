@@ -27,3 +27,11 @@
 "DURATION" = "Time Duration";
 "MINUTES" = "minutes";
 "SECONDS" = "seconds";
+
+// Weight Data Input
+"WEIGHT" = "Weight";
+"LBS" = "lbs";
+
+// Sets & Reps Input
+"SETS" = "Sets";
+"REPS" = "Reps";

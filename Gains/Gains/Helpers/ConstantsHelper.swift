@@ -29,3 +29,7 @@ struct DatePickerDefaults {
   static let defaultMaxYear = Calendar.current.component(.year, from: Date())
   static let defaultRowHeight = 50
 }
+
+struct SizeConstants {
+  static let newWeightScreenHeight = CGFloat(770)
+}

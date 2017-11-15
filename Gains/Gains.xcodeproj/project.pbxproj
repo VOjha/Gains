@@ -31,6 +31,8 @@
 		A60401541FBA75B400E2E4DF /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */; };
 		A60401561FBA75C100E2E4DF /* CustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */; };
 		A60401581FBBBCD900E2E4DF /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401571FBBBCD900E2E4DF /* StyleHelper.swift */; };
+		A604015C1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604015A1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift */; };
+		A604015D1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePicker.xib; sourceTree = "<group>"; };
 		A60401571FBBBCD900E2E4DF /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
+		A604015A1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightExerciseViewController.swift; sourceTree = "<group>"; };
+		A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightExerciseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				A60401261FB6533400E2E4DF /* Landing */,
 				A60401271FB6533B00E2E4DF /* NewExerciseType */,
 				A60401481FBA63E300E2E4DF /* CardioExercise */,
+				A60401591FBBC4AC00E2E4DF /* WeightExercise */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,6 +198,15 @@
 			path = Templates;
 			sourceTree = "<group>";
 		};
+		A60401591FBBC4AC00E2E4DF /* WeightExercise */ = {
+			isa = PBXGroup;
+			children = (
+				A604015A1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift */,
+				A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */,
+			);
+			path = WeightExercise;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A604015D1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib in Resources */,
 				A604012D1FB66A5500E2E4DF /* Localizable.strings in Resources */,
 				A60401381FB67EEE00E2E4DF /* Rubik-Regular.ttf in Resources */,
 				A60401341FB6753900E2E4DF /* Rubik-Bold.ttf in Resources */,
@@ -285,6 +300,7 @@
 				A60401541FBA75B400E2E4DF /* CustomDatePicker.swift in Sources */,
 				A60401411FBA29C100E2E4DF /* StretchExercise.swift in Sources */,
 				A604013F1FBA27EC00E2E4DF /* CardioExercise.swift in Sources */,
+				A604015C1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift in Sources */,
 				A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
