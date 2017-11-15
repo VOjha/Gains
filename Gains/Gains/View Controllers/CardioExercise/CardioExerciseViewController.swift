@@ -18,6 +18,10 @@ class CardioExerciseViewController: UIViewController {
   @IBOutlet weak var datePicker: CustomDatePicker!
   @IBOutlet weak var saveButton: UIButton!
   @IBOutlet weak var durationLabel: UILabel!
+  @IBOutlet weak var minutesTextField: UITextField!
+  @IBOutlet weak var minutesLabel: UILabel!
+  @IBOutlet weak var secondsTextField: UITextField!
+  @IBOutlet weak var secondsLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +54,33 @@ class CardioExerciseViewController: UIViewController {
     exerciseNameTextField.font = Fonts.textFieldFont
     exerciseNameTextField.textColor = Colors.themeBlueColor
 
+    minutesTextField.font = Fonts.textFieldFont
+    minutesTextField.textColor = Colors.themeBlueColor
+
+    secondsTextField.font = Fonts.textFieldFont
+    secondsTextField.textColor = Colors.themeBlueColor
+
+    // Labels styled as Text Fields
+    minutesLabel.font = Fonts.textFieldFont
+    minutesLabel.textColor = Colors.themeBlueColor
+
+    secondsLabel.font = Fonts.textFieldFont
+    secondsLabel.textColor = Colors.themeBlueColor
+
     // Buttons
     saveButton.titleLabel!.font = Fonts.buttonFont
   }
 
   @IBAction func didClickSave(_ sender: Any) {
-    // save new cardio exercise
+    let name = exerciseNameTextField.text
+    let newCardioExercise = CardioExercise(name: name!)
+
+    let mins = Double(self.minutesTextField.text!) ?? 0
+    let secs = Double(self.secondsTextField.text!) ?? 0
+
+    newCardioExercise.addDataPoint(date: datePicker.selectedDate, minutes: mins, seconds: secs)
+
+    cardioExercises[name!] = newCardioExercise
   }
 
 }
