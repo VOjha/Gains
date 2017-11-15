@@ -32,4 +32,5 @@ struct DatePickerDefaults {
 
 struct SizeConstants {
   static let newWeightScreenHeight = CGFloat(770)
+  static let newStretchScreenHeight = CGFloat(670)
 }

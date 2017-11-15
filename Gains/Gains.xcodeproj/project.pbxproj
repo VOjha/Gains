@@ -33,6 +33,8 @@
 		A60401581FBBBCD900E2E4DF /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401571FBBBCD900E2E4DF /* StyleHelper.swift */; };
 		A604015C1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604015A1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift */; };
 		A604015D1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */; };
+		A60401611FBCEBEB00E2E4DF /* StretchExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604015F1FBCEBEB00E2E4DF /* StretchExerciseViewController.swift */; };
+		A60401621FBCEBEB00E2E4DF /* StretchExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401601FBCEBEB00E2E4DF /* StretchExerciseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		A60401571FBBBCD900E2E4DF /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
 		A604015A1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightExerciseViewController.swift; sourceTree = "<group>"; };
 		A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightExerciseViewController.xib; sourceTree = "<group>"; };
+		A604015F1FBCEBEB00E2E4DF /* StretchExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchExerciseViewController.swift; sourceTree = "<group>"; };
+		A60401601FBCEBEB00E2E4DF /* StretchExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StretchExerciseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				A60401261FB6533400E2E4DF /* Landing */,
 				A60401271FB6533B00E2E4DF /* NewExerciseType */,
 				A60401481FBA63E300E2E4DF /* CardioExercise */,
+				A604015E1FBCEB9B00E2E4DF /* StretchExercise */,
 				A60401591FBBC4AC00E2E4DF /* WeightExercise */,
 			);
 			path = "View Controllers";
@@ -207,6 +212,15 @@
 			path = WeightExercise;
 			sourceTree = "<group>";
 		};
+		A604015E1FBCEB9B00E2E4DF /* StretchExercise */ = {
+			isa = PBXGroup;
+			children = (
+				A604015F1FBCEBEB00E2E4DF /* StretchExerciseViewController.swift */,
+				A60401601FBCEBEB00E2E4DF /* StretchExerciseViewController.xib */,
+			);
+			path = StretchExercise;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +283,7 @@
 				A604015D1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib in Resources */,
 				A604012D1FB66A5500E2E4DF /* Localizable.strings in Resources */,
 				A60401381FB67EEE00E2E4DF /* Rubik-Regular.ttf in Resources */,
+				A60401621FBCEBEB00E2E4DF /* StretchExerciseViewController.xib in Resources */,
 				A60401341FB6753900E2E4DF /* Rubik-Bold.ttf in Resources */,
 				A60401471FBA63D700E2E4DF /* CardioExerciseViewController.xib in Resources */,
 				A604011A1FB6502D00E2E4DF /* LaunchScreen.storyboard in Resources */,
@@ -289,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60401301FB66DC600E2E4DF /* LocalizationHelper.swift in Sources */,
+				A60401611FBCEBEB00E2E4DF /* StretchExerciseViewController.swift in Sources */,
 				A60401431FBA5C0600E2E4DF /* Exercises.swift in Sources */,
 				A60401461FBA63D700E2E4DF /* CardioExerciseViewController.swift in Sources */,
 				A60401241FB6512700E2E4DF /* LandingPageViewController.swift in Sources */,

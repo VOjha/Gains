@@ -40,6 +40,8 @@ class NewExerciseTypeViewController: UIViewController {
   }
 
   @IBAction func didClickStretch(_ sender: Any) {
+    let newStretchVC = StretchExerciseViewController()
+    self.navigationController?.pushViewController(newStretchVC, animated: true)
   }
 
   @IBAction func didClickWeight(_ sender: Any) {
