@@ -30,6 +30,7 @@
 		A604014C1FBA6E8B00E2E4DF /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A604014B1FBA6E8B00E2E4DF /* Rubik-Medium.ttf */; };
 		A60401541FBA75B400E2E4DF /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */; };
 		A60401561FBA75C100E2E4DF /* CustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */; };
+		A60401581FBBBCD900E2E4DF /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60401571FBBBCD900E2E4DF /* StyleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		A604014B1FBA6E8B00E2E4DF /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePicker.xib; sourceTree = "<group>"; };
+		A60401571FBBBCD900E2E4DF /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				A604012F1FB66DC600E2E4DF /* LocalizationHelper.swift */,
 				A60401491FBA660300E2E4DF /* ConstantsHelper.swift */,
+				A60401571FBBBCD900E2E4DF /* StyleHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				A60401241FB6512700E2E4DF /* LandingPageViewController.swift in Sources */,
 				A604013B1FB686CC00E2E4DF /* Exercise.swift in Sources */,
 				A604014A1FBA660300E2E4DF /* ConstantsHelper.swift in Sources */,
+				A60401581FBBBCD900E2E4DF /* StyleHelper.swift in Sources */,
 				A60401101FB6502C00E2E4DF /* AppDelegate.swift in Sources */,
 				A604012A1FB6535B00E2E4DF /* NewExerciseTypeViewController.swift in Sources */,
 				A60401541FBA75B400E2E4DF /* CustomDatePicker.swift in Sources */,

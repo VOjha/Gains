@@ -11,10 +11,8 @@ import UIKit
 class NewExerciseTypeViewController: UIViewController {
 
   @IBOutlet var textItems: Array<UIView>?
-  @IBOutlet weak var cardioButton: UIButton!
-  @IBOutlet weak var stretchButton: UIButton!
-  @IBOutlet weak var weightButton: UIButton!
-  @IBOutlet weak var selectTypeLabel: UILabel!
+  @IBOutlet var textButtons: Array<UIButton>?
+  @IBOutlet var textLabels: Array<UILabel>?
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +27,11 @@ class NewExerciseTypeViewController: UIViewController {
   func styleView() {
     setLocalizedTextForViews(self.textItems!)
 
-    // Label
-    selectTypeLabel.font = Fonts.selectTypeTitleFont
-    selectTypeLabel.textColor = Colors.themeRedColor
+    // Labels
+    styleLabels(labels: textLabels!, font: Fonts.selectTypeTitleFont!, textColor: Colors.themeRedColor)
 
     // Buttons
-    cardioButton.titleLabel!.font = Fonts.selectTypeLabelFont
-    stretchButton.titleLabel!.font = Fonts.selectTypeLabelFont
-    weightButton.titleLabel!.font = Fonts.selectTypeLabelFont
+    styleButtons(buttons: textButtons!, font: Fonts.selectTypeLabelFont!, textColor: Colors.themeBlueColor)
   }
 
   @IBAction func didClickCardio(_ sender: Any) {

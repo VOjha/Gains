@@ -11,17 +11,16 @@ import UIKit
 class CardioExerciseViewController: UIViewController {
 
   @IBOutlet var textItems: Array<UIView>?
-  @IBOutlet weak var cardioTypeLabel: UILabel!
-  @IBOutlet weak var exerciseNameLabel: UILabel!
-  @IBOutlet weak var exerciseNameTextField: UITextField!
-  @IBOutlet weak var startDateLabel: UILabel!
-  @IBOutlet weak var datePicker: CustomDatePicker!
-  @IBOutlet weak var saveButton: UIButton!
-  @IBOutlet weak var durationLabel: UILabel!
-  @IBOutlet weak var minutesTextField: UITextField!
-  @IBOutlet weak var minutesLabel: UILabel!
-  @IBOutlet weak var secondsTextField: UITextField!
-  @IBOutlet weak var secondsLabel: UILabel!
+  @IBOutlet var textButtons: Array<UIButton>?
+  @IBOutlet var textFields: Array<UITextField>?
+  @IBOutlet var textLabelsAsFields: Array<UILabel>?
+  @IBOutlet var textTitles: Array<UILabel>?
+  @IBOutlet var textLabels: Array<UILabel>?
+  @IBOutlet weak var datePicker: CustomDatePicker! // keep
+
+  @IBOutlet weak var exerciseNameField: UITextField!
+  @IBOutlet weak var minutesField: UITextField!
+  @IBOutlet weak var secondsField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,46 +36,27 @@ class CardioExerciseViewController: UIViewController {
     setLocalizedTextForViews(textItems!)
 
     // Title
-    cardioTypeLabel.font = Fonts.exerciseTypeTitleFont
-    cardioTypeLabel.textColor = Colors.themeRedColor
+    styleLabels(labels: textTitles!, font: Fonts.exerciseTypeTitleFont!, textColor: Colors.themeRedColor)
 
     // Labels
-    exerciseNameLabel.font = Fonts.textFieldLabelFont
-    exerciseNameLabel.textColor = Colors.themeRedColor
-
-    startDateLabel.font = Fonts.textFieldLabelFont
-    startDateLabel.textColor = Colors.themeRedColor
-
-    durationLabel.font = Fonts.textFieldLabelFont
-    durationLabel.textColor = Colors.themeRedColor
+    styleLabels(labels: textLabels!, font: Fonts.textFieldLabelFont!, textColor: Colors.themeRedColor)
 
     // Text Fields
-    exerciseNameTextField.font = Fonts.textFieldFont
-    exerciseNameTextField.textColor = Colors.themeBlueColor
-
-    minutesTextField.font = Fonts.textFieldFont
-    minutesTextField.textColor = Colors.themeBlueColor
-
-    secondsTextField.font = Fonts.textFieldFont
-    secondsTextField.textColor = Colors.themeBlueColor
+    styleTextFields(fields: textFields!, font: Fonts.textFieldFont!, textColor: Colors.themeBlueColor)
 
     // Labels styled as Text Fields
-    minutesLabel.font = Fonts.textFieldFont
-    minutesLabel.textColor = Colors.themeBlueColor
-
-    secondsLabel.font = Fonts.textFieldFont
-    secondsLabel.textColor = Colors.themeBlueColor
+    styleLabels(labels: textLabelsAsFields!, font: Fonts.textFieldFont!, textColor: Colors.themeBlueColor)
 
     // Buttons
-    saveButton.titleLabel!.font = Fonts.buttonFont
+    styleButtons(buttons: textButtons!, font: Fonts.buttonFont!, textColor: Colors.themeBlueColor)
   }
 
   @IBAction func didClickSave(_ sender: Any) {
-    let name = exerciseNameTextField.text
+    let name = exerciseNameField.text
     let newCardioExercise = CardioExercise(name: name!)
 
-    let mins = Double(self.minutesTextField.text!) ?? 0
-    let secs = Double(self.secondsTextField.text!) ?? 0
+    let mins = Double(self.minutesField.text!) ?? 0
+    let secs = Double(self.secondsField.text!) ?? 0
 
     newCardioExercise.addDataPoint(date: datePicker.selectedDate, minutes: mins, seconds: secs)
 

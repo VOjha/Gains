@@ -11,10 +11,8 @@ import UIKit
 class LandingPageViewController: UIViewController {
 
   @IBOutlet var textItems: Array<UIView>?
-  @IBOutlet weak var welcomeLabel: UILabel!
-  @IBOutlet weak var viewStatsButton: UIButton!
-  @IBOutlet weak var newExerciseButton: UIButton!
-  @IBOutlet weak var enterDataButton: UIButton!
+  @IBOutlet var textButtons: Array<UIButton>?
+  @IBOutlet var textLabels: Array<UILabel>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +27,11 @@ class LandingPageViewController: UIViewController {
   func styleView() {
     setLocalizedTextForViews(self.textItems!)
 
-    // Welcome Label
-    welcomeLabel.font = Fonts.landingPageTitleFont
-    welcomeLabel.textColor = Colors.themeRedColor
+    // Labels
+    styleLabels(labels: textLabels!, font: Fonts.landingPageTitleFont!, textColor: Colors.themeRedColor)
 
     // Buttons
-    viewStatsButton.titleLabel!.font = Fonts.buttonFont
-    newExerciseButton.titleLabel!.font = Fonts.buttonFont
-    enterDataButton.titleLabel!.font = Fonts.buttonFont
+    styleButtons(buttons: textButtons!, font: Fonts.buttonFont!, textColor: Colors.themeBlueColor)
   }
 
   @IBAction func didClickNewExercise(_ sender: Any) {
