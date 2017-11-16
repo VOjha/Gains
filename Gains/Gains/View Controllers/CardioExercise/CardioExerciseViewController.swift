@@ -17,6 +17,7 @@ class CardioExerciseViewController: UIViewController {
   @IBOutlet var textTitles: Array<UILabel>?
   @IBOutlet var textLabels: Array<UILabel>?
   @IBOutlet weak var datePicker: CustomDatePicker!
+  @IBOutlet weak var scrollView: UIScrollView!
 
   @IBOutlet weak var exerciseNameField: UITextField!
   @IBOutlet weak var minutesField: UITextField!
@@ -31,6 +32,10 @@ class CardioExerciseViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+  override func viewDidLayoutSubviews() {
+    scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: SizeConstants.newCardioScreenHeight)
+  }
 
   func styleView() {
     setLocalizedTextForViews(textItems!)

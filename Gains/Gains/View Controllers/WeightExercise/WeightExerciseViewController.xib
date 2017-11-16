@@ -58,19 +58,22 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT_TYPE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED7-nm-RQL" userLabel="Weight Type Label">
-                            <rect key="frame" x="140" y="79.5" width="112" height="21"/>
+                            <rect key="frame" x="165" y="79.5" width="112" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X9-IB-jCd" userLabel="Exercise Name Label">
-                            <rect key="frame" x="40" y="190" width="172" height="21"/>
+                            <rect key="frame" x="40" y="190" width="295" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="295" id="Y0e-fu-0T1"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-dQ-5PA" userLabel="Exercise Name Text Field">
-                            <rect key="frame" x="40" y="211" width="172" height="40"/>
+                            <rect key="frame" x="40" y="211" width="295" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="WXb-zB-yjY"/>
                             </constraints>
@@ -79,34 +82,34 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-Gw-XzB" userLabel="Exercise Name Underline View">
-                            <rect key="frame" x="40" y="251" width="172" height="1"/>
+                            <rect key="frame" x="40" y="251" width="295" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="cGr-WJ-aeb"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START_DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-2K-g56" userLabel="Start Date Label">
-                            <rect key="frame" x="40" y="272" width="172" height="21"/>
+                            <rect key="frame" x="40" y="272" width="295" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdV-Hu-O27" customClass="CustomDatePicker" customModule="Gains" customModuleProvider="target">
-                            <rect key="frame" x="40" y="293" width="172" height="150"/>
+                            <rect key="frame" x="40" y="293" width="295" height="150"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="hTi-Vq-LL3"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-6B-3M0" userLabel="Start Date Underline View">
-                            <rect key="frame" x="40" y="443" width="172" height="1"/>
+                            <rect key="frame" x="40" y="443" width="295" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="nhs-pA-eZi"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIB-Xb-JwU" userLabel="Weight Label">
-                            <rect key="frame" x="40" y="464" width="172" height="21"/>
+                            <rect key="frame" x="40" y="464" width="295" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -135,7 +138,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-ef-hJ6" userLabel="Sets Label">
-                            <rect key="frame" x="40" y="546" width="86" height="21"/>
+                            <rect key="frame" x="40" y="546" width="147.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -158,13 +161,13 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kka-wx-MnL" userLabel="Reps Label">
-                            <rect key="frame" x="126" y="546" width="86" height="21"/>
+                            <rect key="frame" x="187.5" y="546" width="147.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aI-py-csd" userLabel="Reps Text Field">
-                            <rect key="frame" x="126" y="567" width="67.5" height="40"/>
+                            <rect key="frame" x="187.5" y="567" width="67.5" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="0jU-0T-djc"/>
                                 <constraint firstAttribute="width" constant="67.5" id="9jA-WK-jdk"/>
@@ -174,7 +177,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XyZ-0P-QWE" userLabel="Reps Underline View">
-                            <rect key="frame" x="126" y="607" width="67.5" height="1"/>
+                            <rect key="frame" x="187.5" y="607" width="67.5" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Ciw-Xk-Qnp"/>
@@ -191,17 +194,16 @@
                     <constraints>
                         <constraint firstItem="NIB-Xb-JwU" firstAttribute="trailing" secondItem="mTo-2K-g56" secondAttribute="trailing" id="00C-TL-Nxk"/>
                         <constraint firstItem="XyZ-0P-QWE" firstAttribute="top" secondItem="5aI-py-csd" secondAttribute="bottom" id="1xG-6t-rvw"/>
-                        <constraint firstAttribute="trailing" secondItem="ED7-nm-RQL" secondAttribute="trailing" id="3eF-69-0Tt"/>
-                        <constraint firstAttribute="trailing" secondItem="9X9-IB-jCd" secondAttribute="trailing" constant="40" id="6Li-FE-yQF"/>
                         <constraint firstItem="mTo-2K-g56" firstAttribute="top" secondItem="sWf-Gw-XzB" secondAttribute="bottom" constant="20" id="70t-Wg-3To"/>
                         <constraint firstItem="bdV-Hu-O27" firstAttribute="leading" secondItem="mTo-2K-g56" secondAttribute="leading" id="8M2-0J-698"/>
                         <constraint firstItem="uX0-qe-fS2" firstAttribute="centerX" secondItem="K6g-w8-4ME" secondAttribute="centerX" id="951-Ym-lvp"/>
                         <constraint firstItem="LaJ-6B-3M0" firstAttribute="top" secondItem="bdV-Hu-O27" secondAttribute="bottom" id="9Sw-Ir-Xlf"/>
                         <constraint firstItem="hLU-ef-hJ6" firstAttribute="top" secondItem="6hh-y0-5k3" secondAttribute="bottom" constant="20" id="AuR-nY-1Ll"/>
                         <constraint firstItem="kka-wx-MnL" firstAttribute="centerY" secondItem="hLU-ef-hJ6" secondAttribute="centerY" id="BhP-Tr-dtd"/>
+                        <constraint firstItem="72j-Er-DzC" firstAttribute="leading" secondItem="9X9-IB-jCd" secondAttribute="leading" id="CVE-L3-rz9"/>
                         <constraint firstItem="uX0-qe-fS2" firstAttribute="width" secondItem="K6g-w8-4ME" secondAttribute="width" id="CeS-Sc-SsU"/>
                         <constraint firstItem="qdL-cG-8xQ" firstAttribute="leading" secondItem="J8o-Tg-aRb" secondAttribute="trailing" constant="5" id="Cf9-3O-NF7"/>
-                        <constraint firstItem="9X9-IB-jCd" firstAttribute="leading" secondItem="K6g-w8-4ME" secondAttribute="leading" constant="40" id="EDt-SQ-jZK"/>
+                        <constraint firstItem="9X9-IB-jCd" firstAttribute="centerX" secondItem="K6g-w8-4ME" secondAttribute="centerX" id="Day-Yn-Rcj"/>
                         <constraint firstItem="5aI-py-csd" firstAttribute="top" secondItem="kka-wx-MnL" secondAttribute="bottom" id="F6z-I0-vWp"/>
                         <constraint firstItem="sWf-Gw-XzB" firstAttribute="leading" secondItem="1cF-dQ-5PA" secondAttribute="leading" id="G1a-sf-Rc2"/>
                         <constraint firstItem="NIB-Xb-JwU" firstAttribute="leading" secondItem="mTo-2K-g56" secondAttribute="leading" id="JMs-mr-PyE"/>
@@ -210,15 +212,15 @@
                         <constraint firstItem="XyZ-0P-QWE" firstAttribute="trailing" secondItem="5aI-py-csd" secondAttribute="trailing" id="LE6-bF-Wqg"/>
                         <constraint firstItem="72j-Er-DzC" firstAttribute="top" secondItem="K6g-w8-4ME" secondAttribute="top" constant="40" id="MSJ-LR-o08"/>
                         <constraint firstItem="kka-wx-MnL" firstAttribute="trailing" secondItem="NIB-Xb-JwU" secondAttribute="trailing" id="Mwb-q7-txp"/>
-                        <constraint firstItem="72j-Er-DzC" firstAttribute="leading" secondItem="K6g-w8-4ME" secondAttribute="leading" constant="40" id="OIz-zo-zmv"/>
                         <constraint firstItem="1cF-dQ-5PA" firstAttribute="leading" secondItem="9X9-IB-jCd" secondAttribute="leading" id="OOX-9n-lf9"/>
                         <constraint firstItem="5aI-py-csd" firstAttribute="leading" secondItem="kka-wx-MnL" secondAttribute="leading" id="Pfm-Iz-9Ue"/>
+                        <constraint firstAttribute="trailing" secondItem="ED7-nm-RQL" secondAttribute="trailing" id="Sdw-bd-aga"/>
                         <constraint firstItem="qdL-cG-8xQ" firstAttribute="bottom" secondItem="J8o-Tg-aRb" secondAttribute="bottom" id="T8A-bl-qQx"/>
                         <constraint firstItem="1cF-dQ-5PA" firstAttribute="trailing" secondItem="9X9-IB-jCd" secondAttribute="trailing" id="Tmh-y5-7fs"/>
                         <constraint firstItem="bdV-Hu-O27" firstAttribute="top" secondItem="mTo-2K-g56" secondAttribute="bottom" id="UWM-LJ-636"/>
                         <constraint firstItem="J8o-Tg-aRb" firstAttribute="top" secondItem="NIB-Xb-JwU" secondAttribute="bottom" id="VpJ-UK-aiF"/>
                         <constraint firstItem="Bxr-TG-TEa" firstAttribute="leading" secondItem="hLU-ef-hJ6" secondAttribute="leading" id="VzY-DN-utS"/>
-                        <constraint firstItem="ED7-nm-RQL" firstAttribute="leading" secondItem="72j-Er-DzC" secondAttribute="trailing" id="WV3-nx-xD6"/>
+                        <constraint firstItem="ED7-nm-RQL" firstAttribute="leading" secondItem="72j-Er-DzC" secondAttribute="trailing" constant="25" id="WV3-nx-xD6"/>
                         <constraint firstItem="LaJ-6B-3M0" firstAttribute="leading" secondItem="bdV-Hu-O27" secondAttribute="leading" id="Wvl-Od-DCs"/>
                         <constraint firstItem="J8o-Tg-aRb" firstAttribute="leading" secondItem="NIB-Xb-JwU" secondAttribute="leading" id="Wxh-y1-1AJ"/>
                         <constraint firstItem="mTo-2K-g56" firstAttribute="leading" secondItem="9X9-IB-jCd" secondAttribute="leading" id="XRC-8q-gxL"/>

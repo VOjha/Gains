@@ -25,7 +25,6 @@ class StretchExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleView()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

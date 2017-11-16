@@ -52,19 +52,22 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STRETCH_TYPE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUA-vf-sHr" userLabel="Stretch Type Label">
-                            <rect key="frame" x="140" y="80" width="123" height="21"/>
+                            <rect key="frame" x="165" y="80" width="123" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE_NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOj-oC-wVp" userLabel="Exercise Name Label">
-                            <rect key="frame" x="40" y="190" width="183" height="21"/>
+                            <rect key="frame" x="40.5" y="190" width="295" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="295" id="iR3-ym-VzF"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-hu-ohj" userLabel="Exercise Name Text Field">
-                            <rect key="frame" x="40" y="211" width="183" height="40"/>
+                            <rect key="frame" x="40.5" y="211" width="295" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="kFC-ap-PzH"/>
                             </constraints>
@@ -73,40 +76,40 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMc-ac-Hby" userLabel="Exercise Name Underline View">
-                            <rect key="frame" x="40" y="251" width="183" height="1"/>
+                            <rect key="frame" x="40.5" y="251" width="295" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Ww8-8r-bcA"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START_DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dn5-Ve-Mt4" userLabel="Start Date Label">
-                            <rect key="frame" x="40" y="272" width="183" height="21"/>
+                            <rect key="frame" x="40.5" y="272" width="295" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-XL-kFn" customClass="CustomDatePicker" customModule="Gains" customModuleProvider="target">
-                            <rect key="frame" x="40" y="293" width="183" height="150"/>
+                            <rect key="frame" x="40.5" y="293" width="295" height="150"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="YkA-3T-DhX"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GW2-5B-yrg" userLabel="Start Date Underline View">
-                            <rect key="frame" x="40" y="443" width="183" height="1"/>
+                            <rect key="frame" x="40.5" y="443" width="295" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Dvb-IK-dyj"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dV-gd-3zz" userLabel="Sets Label">
-                            <rect key="frame" x="40" y="464" width="91.5" height="21"/>
+                            <rect key="frame" x="40.5" y="464" width="147.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Kf-da-hgB" userLabel="Sets Text Field">
-                            <rect key="frame" x="40" y="485" width="67.5" height="40"/>
+                            <rect key="frame" x="40.5" y="485" width="67.5" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="fo1-XN-V2b"/>
                                 <constraint firstAttribute="width" constant="67.5" id="jxO-5k-dtl"/>
@@ -116,20 +119,20 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uM3-A8-8z7" userLabel="Sets Underline View">
-                            <rect key="frame" x="40" y="525" width="67.5" height="1"/>
+                            <rect key="frame" x="40.5" y="525" width="67.5" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="WlV-nW-dod"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neX-uT-4h5" userLabel="Reps Label">
-                            <rect key="frame" x="131.5" y="464" width="91.5" height="21"/>
+                            <rect key="frame" x="188" y="464" width="147.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOz-Hl-jnt" userLabel="Reps Text Field">
-                            <rect key="frame" x="131.5" y="485" width="67.5" height="40"/>
+                            <rect key="frame" x="188" y="485" width="67.5" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7aV-8Y-9B9"/>
                                 <constraint firstAttribute="width" constant="67.5" id="rG7-IU-AEL"/>
@@ -139,7 +142,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-Cf-OPG" userLabel="Reps Underline View">
-                            <rect key="frame" x="131.5" y="525" width="67.5" height="1"/>
+                            <rect key="frame" x="188" y="525" width="67.5" height="1"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="QpD-Lv-g6W"/>
@@ -169,14 +172,12 @@
                         <constraint firstItem="N0Y-Cf-OPG" firstAttribute="top" secondItem="HOz-Hl-jnt" secondAttribute="bottom" id="MaJ-iP-as2"/>
                         <constraint firstItem="X7W-hu-ohj" firstAttribute="trailing" secondItem="eOj-oC-wVp" secondAttribute="trailing" id="Mdj-uM-rSg"/>
                         <constraint firstItem="uM3-A8-8z7" firstAttribute="trailing" secondItem="6Kf-da-hgB" secondAttribute="trailing" id="MrY-3i-Sdk"/>
-                        <constraint firstAttribute="trailing" secondItem="eOj-oC-wVp" secondAttribute="trailing" constant="40" id="N5z-xv-gfd"/>
                         <constraint firstItem="aI2-1T-VQp" firstAttribute="top" secondItem="uM3-A8-8z7" secondAttribute="bottom" constant="60" id="Nld-l2-PKH"/>
                         <constraint firstItem="6Kf-da-hgB" firstAttribute="leading" secondItem="5dV-gd-3zz" secondAttribute="leading" id="QLD-Ud-6cc"/>
                         <constraint firstAttribute="trailing" secondItem="OUA-vf-sHr" secondAttribute="trailing" id="RV1-uk-s0n"/>
                         <constraint firstItem="X7W-hu-ohj" firstAttribute="top" secondItem="eOj-oC-wVp" secondAttribute="bottom" id="SL1-CD-SZB"/>
                         <constraint firstItem="X7W-hu-ohj" firstAttribute="leading" secondItem="eOj-oC-wVp" secondAttribute="leading" id="SiD-cD-g9d"/>
                         <constraint firstItem="aI2-1T-VQp" firstAttribute="width" secondItem="sOG-86-oul" secondAttribute="width" id="SvQ-K9-ZnU"/>
-                        <constraint firstItem="ca9-rz-9h1" firstAttribute="leading" secondItem="sOG-86-oul" secondAttribute="leading" constant="40" id="TG4-DE-N52"/>
                         <constraint firstItem="neX-uT-4h5" firstAttribute="trailing" secondItem="Dn5-Ve-Mt4" secondAttribute="trailing" id="Xda-tR-Mex"/>
                         <constraint firstItem="Dn5-Ve-Mt4" firstAttribute="trailing" secondItem="eOj-oC-wVp" secondAttribute="trailing" id="Y65-1L-Ntb"/>
                         <constraint firstItem="yMc-ac-Hby" firstAttribute="top" secondItem="X7W-hu-ohj" secondAttribute="bottom" id="alr-CL-kX1"/>
@@ -185,18 +186,19 @@
                         <constraint firstItem="ca9-rz-9h1" firstAttribute="top" secondItem="sOG-86-oul" secondAttribute="top" constant="40" id="fQJ-9M-x0V"/>
                         <constraint firstItem="6Kf-da-hgB" firstAttribute="top" secondItem="5dV-gd-3zz" secondAttribute="bottom" id="fe3-qv-N5o"/>
                         <constraint firstItem="uM3-A8-8z7" firstAttribute="leading" secondItem="6Kf-da-hgB" secondAttribute="leading" id="jDz-p7-dVo"/>
+                        <constraint firstItem="eOj-oC-wVp" firstAttribute="centerX" secondItem="sOG-86-oul" secondAttribute="centerX" id="jp4-Z6-ccL"/>
                         <constraint firstItem="N0Y-Cf-OPG" firstAttribute="trailing" secondItem="HOz-Hl-jnt" secondAttribute="trailing" id="nY7-LL-B6X"/>
                         <constraint firstItem="Dn5-Ve-Mt4" firstAttribute="leading" secondItem="eOj-oC-wVp" secondAttribute="leading" id="osW-2p-0kF"/>
-                        <constraint firstItem="OUA-vf-sHr" firstAttribute="leading" secondItem="ca9-rz-9h1" secondAttribute="trailing" id="pfD-Ux-vnK"/>
+                        <constraint firstItem="OUA-vf-sHr" firstAttribute="leading" secondItem="ca9-rz-9h1" secondAttribute="trailing" constant="25" id="pfD-Ux-vnK"/>
                         <constraint firstItem="yMc-ac-Hby" firstAttribute="leading" secondItem="X7W-hu-ohj" secondAttribute="leading" id="rXf-Zu-6mO"/>
                         <constraint firstItem="uM3-A8-8z7" firstAttribute="top" secondItem="6Kf-da-hgB" secondAttribute="bottom" id="s9a-qS-jak"/>
                         <constraint firstItem="neX-uT-4h5" firstAttribute="leading" secondItem="5dV-gd-3zz" secondAttribute="trailing" id="sVl-fq-Js0"/>
                         <constraint firstItem="eOj-oC-wVp" firstAttribute="top" secondItem="ca9-rz-9h1" secondAttribute="bottom" constant="50" id="scg-Az-m81"/>
                         <constraint firstItem="neX-uT-4h5" firstAttribute="centerY" secondItem="5dV-gd-3zz" secondAttribute="centerY" id="tQ1-Wl-0fR"/>
+                        <constraint firstItem="ca9-rz-9h1" firstAttribute="leading" secondItem="eOj-oC-wVp" secondAttribute="leading" id="uGV-wF-PKj"/>
                         <constraint firstItem="PsV-XL-kFn" firstAttribute="trailing" secondItem="Dn5-Ve-Mt4" secondAttribute="trailing" id="vVR-LZ-GAc"/>
                         <constraint firstItem="GW2-5B-yrg" firstAttribute="leading" secondItem="PsV-XL-kFn" secondAttribute="leading" id="whN-pE-yry"/>
                         <constraint firstItem="aI2-1T-VQp" firstAttribute="centerX" secondItem="sOG-86-oul" secondAttribute="centerX" id="yaK-WH-gnL"/>
-                        <constraint firstItem="eOj-oC-wVp" firstAttribute="leading" secondItem="sOG-86-oul" secondAttribute="leading" constant="40" id="zbl-l3-wmT"/>
                     </constraints>
                 </scrollView>
             </subviews>

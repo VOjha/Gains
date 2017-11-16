@@ -24,12 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window!.rootViewController = navigationController
     window!.makeKeyAndVisible()
 
-    // Remove when done designing:
-//    UIFont.familyNames.forEach({ familyName in
-//      let fontNames = UIFont.fontNames(forFamilyName: familyName)
-//      print(familyName, fontNames)
-//    })
-
     return true
   }
 
