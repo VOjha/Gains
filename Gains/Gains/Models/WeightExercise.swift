@@ -25,4 +25,11 @@ class WeightExercise: Exercise {
     data["reps"] = reps
     self.weights[date] = data;
   }
+
+  func toDictionary() -> NSMutableDictionary {
+    let jsonable = getDictionaryWithoutData()
+    jsonable["data"] = convertDatesToStrings(dataDict: self.weights)
+
+    return jsonable
+  }
 }

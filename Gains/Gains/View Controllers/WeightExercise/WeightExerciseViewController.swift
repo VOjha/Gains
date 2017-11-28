@@ -67,7 +67,8 @@ class WeightExerciseViewController: UIViewController {
 
     newWeightExercise.addDataPoint(date: datePicker.selectedDate, weight: weight, sets: sets, reps: reps)
 
-    weightExercises[name!] = newWeightExercise
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appDelegate.exercises?.addExercise(exercise: newWeightExercise)
   }
 
 }

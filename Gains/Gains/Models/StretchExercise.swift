@@ -24,4 +24,11 @@ class StretchExercise: Exercise {
     data["reps"] = reps
     self.stretches[date] = data
   }
+
+  func toDictionary() -> NSMutableDictionary {
+    let jsonable = getDictionaryWithoutData()
+    jsonable["data"] = convertDatesToStrings(dataDict: self.stretches)
+
+    return jsonable
+  }
 }

@@ -61,7 +61,8 @@ class StretchExerciseViewController: UIViewController {
 
     newStretchExercise.addDataPoint(date: datePicker.selectedDate, sets: sets, reps: reps)
 
-    stretchExercises[name!] = newStretchExercise
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appDelegate.exercises?.addExercise(exercise: newStretchExercise)
   }
 
 }

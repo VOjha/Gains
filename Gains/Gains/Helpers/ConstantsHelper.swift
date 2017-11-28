@@ -35,3 +35,10 @@ struct SizeConstants {
   static let newStretchScreenHeight = CGFloat(670)
   static let newCardioScreenHeight = CGFloat(670)
 }
+
+struct URLConstants {
+  static let baseURL = "http://localhost:3000/"
+  static let weightExercisesURL = "weight_exercises/"
+  static let cardioExercisesURL = "cardio_exercises/"
+  static let stretchExercisesURL = "stretch_exercises/"
+}

@@ -21,4 +21,11 @@ class CardioExercise: Exercise {
   func addDataPoint(date: Date, minutes: Double, seconds: Double) {
     self.times[date] = minutes + (seconds/60.0)
   }
+
+  func toDictionary() -> NSMutableDictionary {
+    let jsonable = getDictionaryWithoutData()
+    jsonable["data"] = convertDatesToStrings(dataDict: self.times)
+
+    return jsonable
+  }
 }

@@ -8,6 +8,27 @@
 
 import UIKit
 
-var weightExercises = [String: WeightExercise]()
-var cardioExercises = [String: CardioExercise]()
-var stretchExercises = [String: StretchExercise]()
+class Exercises {
+  var weightExercises: [String: WeightExercise]
+  var cardioExercises: [String: CardioExercise]
+  var stretchExercises: [String: StretchExercise]
+
+  init() {
+    self.weightExercises = [String: WeightExercise]()
+    self.cardioExercises = [String: CardioExercise]()
+    self.stretchExercises = [String: StretchExercise]()
+  }
+
+  func addExercise(exercise: Exercise) {
+    switch exercise.type.name {
+    case weightType.name:
+      self.weightExercises[exercise.name] = exercise as? WeightExercise
+    case cardioType.name:
+      self.cardioExercises[exercise.name] = exercise as? CardioExercise
+    case stretchType.name:
+      self.stretchExercises[exercise.name] = exercise as? StretchExercise
+    default:
+      break
+    }
+  }
+}

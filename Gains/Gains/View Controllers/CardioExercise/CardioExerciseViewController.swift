@@ -65,7 +65,8 @@ class CardioExerciseViewController: UIViewController {
 
     newCardioExercise.addDataPoint(date: datePicker.selectedDate, minutes: mins, seconds: secs)
 
-    cardioExercises[name!] = newCardioExercise
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appDelegate.exercises?.addExercise(exercise: newCardioExercise)
   }
 
 }
