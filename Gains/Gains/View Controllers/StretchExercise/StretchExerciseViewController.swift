@@ -63,6 +63,9 @@ class StretchExerciseViewController: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.exercises?.addExercise(exercise: newStretchExercise)
+
+    let landingVC = LandingPageViewController()
+    self.navigationController?.pushViewController(landingVC, animated: true)
   }
 
 }

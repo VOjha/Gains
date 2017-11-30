@@ -35,3 +35,6 @@
 // Sets & Reps Input
 "SETS" = "Sets";
 "REPS" = "Reps";
+
+// Enter Workout Data Page
+"DATE" = "Date";

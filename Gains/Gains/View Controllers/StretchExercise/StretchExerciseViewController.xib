@@ -210,6 +210,7 @@
                 <constraint firstItem="sOG-86-oul" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="pvk-gk-ljB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
     <resources>

@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT_TYPE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czh-w1-JyD" userLabel="Select Exercise Type Label">
-                    <rect key="frame" x="0.0" y="40" width="375" height="21"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                 <constraint firstItem="Gc5-vS-KqD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="55" id="SBd-Te-PCI"/>
                 <constraint firstItem="oFO-Se-NtJ" firstAttribute="leading" secondItem="Gc5-vS-KqD" secondAttribute="leading" id="Vzv-rC-bGD"/>
                 <constraint firstItem="LIG-IM-QDO" firstAttribute="centerY" secondItem="oFO-Se-NtJ" secondAttribute="centerY" id="ZXA-qk-hCh"/>
-                <constraint firstItem="czh-w1-JyD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fKb-T4-8WQ"/>
+                <constraint firstItem="czh-w1-JyD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="fKb-T4-8WQ"/>
                 <constraint firstItem="Gc5-vS-KqD" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="hDu-4h-VIn"/>
                 <constraint firstItem="HDA-Cd-snc" firstAttribute="height" secondItem="Gc5-vS-KqD" secondAttribute="height" id="hTX-8c-WNm"/>
                 <constraint firstItem="oFO-Se-NtJ" firstAttribute="height" secondItem="Gc5-vS-KqD" secondAttribute="height" id="i4e-92-oeG"/>

@@ -31,4 +31,28 @@ class Exercises {
       break
     }
   }
+
+  func numCardioExercises() -> Int {
+    return cardioExercises.count
+  }
+
+  func numStretchExercises() -> Int {
+    return stretchExercises.count
+  }
+
+  func numWeightExercises() -> Int {
+    return weightExercises.count
+  }
+
+  func getCardioExercise(name: String) -> CardioExercise {
+    return cardioExercises[name]!
+  }
+
+  func getStretchExercise(name: String) -> StretchExercise {
+    return stretchExercises[name]!
+  }
+
+  func getWeightExercise(name: String) -> WeightExercise {
+    return weightExercises[name]!
+  }
 }

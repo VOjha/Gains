@@ -39,4 +39,9 @@ class LandingPageViewController: UIViewController {
     self.navigationController?.pushViewController(newExerciseVC, animated: true)
   }
 
+  @IBAction func didClickEnterData(_ sender: Any) {
+    let enterDataVC = EnterDataViewController()
+    self.navigationController?.pushViewController(enterDataVC, animated: true)
+  }
+
 }

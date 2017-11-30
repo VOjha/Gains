@@ -35,6 +35,10 @@
 		A604015D1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */; };
 		A60401611FBCEBEB00E2E4DF /* StretchExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A604015F1FBCEBEB00E2E4DF /* StretchExerciseViewController.swift */; };
 		A60401621FBCEBEB00E2E4DF /* StretchExerciseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60401601FBCEBEB00E2E4DF /* StretchExerciseViewController.xib */; };
+		A67DFC211FCF629700625478 /* ExercisePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DFC201FCF629700625478 /* ExercisePicker.swift */; };
+		A67DFC251FCF785400625478 /* ExercisePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67DFC241FCF785400625478 /* ExercisePicker.xib */; };
+		A6CD42CD1FCCECAA0053029D /* EnterDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */; };
+		A6CD42CE1FCCECAA0053029D /* EnterDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CD42CC1FCCECAA0053029D /* EnterDataViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +72,10 @@
 		A604015B1FBBC4CD00E2E4DF /* WeightExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightExerciseViewController.xib; sourceTree = "<group>"; };
 		A604015F1FBCEBEB00E2E4DF /* StretchExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchExerciseViewController.swift; sourceTree = "<group>"; };
 		A60401601FBCEBEB00E2E4DF /* StretchExerciseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StretchExerciseViewController.xib; sourceTree = "<group>"; };
+		A67DFC201FCF629700625478 /* ExercisePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePicker.swift; sourceTree = "<group>"; };
+		A67DFC241FCF785400625478 /* ExercisePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExercisePicker.xib; sourceTree = "<group>"; };
+		A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDataViewController.swift; sourceTree = "<group>"; };
+		A6CD42CC1FCCECAA0053029D /* EnterDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterDataViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 		A60401211FB650F800E2E4DF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A6CD42CA1FCCEC960053029D /* EnterData */,
 				A60401261FB6533400E2E4DF /* Landing */,
 				A60401271FB6533B00E2E4DF /* NewExerciseType */,
 				A60401481FBA63E300E2E4DF /* CardioExercise */,
@@ -197,8 +206,8 @@
 		A60401521FBA757200E2E4DF /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */,
-				A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */,
+				A67DFC1F1FCF5F7100625478 /* ExercisePicker */,
+				A67DFC1E1FCF5F6500625478 /* CustomDatePicker */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -219,6 +228,33 @@
 				A60401601FBCEBEB00E2E4DF /* StretchExerciseViewController.xib */,
 			);
 			path = StretchExercise;
+			sourceTree = "<group>";
+		};
+		A67DFC1E1FCF5F6500625478 /* CustomDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A60401531FBA75B400E2E4DF /* CustomDatePicker.swift */,
+				A60401551FBA75C100E2E4DF /* CustomDatePicker.xib */,
+			);
+			path = CustomDatePicker;
+			sourceTree = "<group>";
+		};
+		A67DFC1F1FCF5F7100625478 /* ExercisePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A67DFC201FCF629700625478 /* ExercisePicker.swift */,
+				A67DFC241FCF785400625478 /* ExercisePicker.xib */,
+			);
+			path = ExercisePicker;
+			sourceTree = "<group>";
+		};
+		A6CD42CA1FCCEC960053029D /* EnterData */ = {
+			isa = PBXGroup;
+			children = (
+				A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */,
+				A6CD42CC1FCCECAA0053029D /* EnterDataViewController.xib */,
+			);
+			path = EnterData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +322,9 @@
 				A60401621FBCEBEB00E2E4DF /* StretchExerciseViewController.xib in Resources */,
 				A60401341FB6753900E2E4DF /* Rubik-Bold.ttf in Resources */,
 				A60401471FBA63D700E2E4DF /* CardioExerciseViewController.xib in Resources */,
+				A67DFC251FCF785400625478 /* ExercisePicker.xib in Resources */,
 				A604011A1FB6502D00E2E4DF /* LaunchScreen.storyboard in Resources */,
+				A6CD42CE1FCCECAA0053029D /* EnterDataViewController.xib in Resources */,
 				A60401561FBA75C100E2E4DF /* CustomDatePicker.xib in Resources */,
 				A60401171FB6502D00E2E4DF /* Assets.xcassets in Resources */,
 				A60401251FB6512700E2E4DF /* LandingPageViewController.xib in Resources */,
@@ -317,7 +355,9 @@
 				A60401411FBA29C100E2E4DF /* StretchExercise.swift in Sources */,
 				A604013F1FBA27EC00E2E4DF /* CardioExercise.swift in Sources */,
 				A604015C1FBBC4CD00E2E4DF /* WeightExerciseViewController.swift in Sources */,
+				A67DFC211FCF629700625478 /* ExercisePicker.swift in Sources */,
 				A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */,
+				A6CD42CD1FCCECAA0053029D /* EnterDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
