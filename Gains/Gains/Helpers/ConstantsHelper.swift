@@ -46,3 +46,15 @@ struct URLConstants {
   static let cardioExercisesURL = "cardio_exercises/"
   static let stretchExercisesURL = "stretch_exercises/"
 }
+
+struct PropertyKey {
+  static let name = "name"
+  static let data = "data"
+}
+
+struct FilePaths {
+  static let documentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+  static let cardioURL = documentsDirectory.appendingPathComponent("cardioExercises")
+  static let stretchURL = documentsDirectory.appendingPathComponent("stretchExercises")
+  static let weightsURL = documentsDirectory.appendingPathComponent("weightExercises")
+}

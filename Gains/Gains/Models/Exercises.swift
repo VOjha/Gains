@@ -9,50 +9,83 @@
 import UIKit
 
 class Exercises {
-  var weightExercises: [String: WeightExercise]
-  var cardioExercises: [String: CardioExercise]
-  var stretchExercises: [String: StretchExercise]
+  var weightExercises: [WeightExercise]
+  var cardioExercises: [CardioExercise]
+  var stretchExercises: [StretchExercise]
 
   init() {
-    self.weightExercises = [String: WeightExercise]()
-    self.cardioExercises = [String: CardioExercise]()
-    self.stretchExercises = [String: StretchExercise]()
+    self.weightExercises = [WeightExercise]()
+    self.cardioExercises = [CardioExercise]()
+    self.stretchExercises = [StretchExercise]()
   }
 
   func addExercise(exercise: Exercise) {
     switch exercise.type.name {
     case weightType.name:
-      self.weightExercises[exercise.name] = exercise as? WeightExercise
+      self.weightExercises.append((exercise as? WeightExercise)!)
     case cardioType.name:
-      self.cardioExercises[exercise.name] = exercise as? CardioExercise
+      self.cardioExercises.append((exercise as? CardioExercise)!)
     case stretchType.name:
-      self.stretchExercises[exercise.name] = exercise as? StretchExercise
+      self.stretchExercises.append((exercise as? StretchExercise)!)
     default:
       break
     }
   }
 
-  func numCardioExercises() -> Int {
-    return cardioExercises.count
+  func getCardioExercise(index: Int) -> CardioExercise {
+    return cardioExercises[index]
   }
 
-  func numStretchExercises() -> Int {
-    return stretchExercises.count
+  func getStretchExercise(index: Int) -> StretchExercise {
+    return stretchExercises[index]
   }
 
-  func numWeightExercises() -> Int {
-    return weightExercises.count
+  func getWeightExercise(index: Int) -> WeightExercise {
+    return weightExercises[index]
   }
 
-  func getCardioExercise(name: String) -> CardioExercise {
-    return cardioExercises[name]!
+  func cardioExerciseKeys() -> [String] {
+    var results = [String]()
+
+    for ex in cardioExercises {
+      results.append(ex.name)
+    }
+
+    return results
   }
 
-  func getStretchExercise(name: String) -> StretchExercise {
-    return stretchExercises[name]!
+  func stretchExerciseKeys() -> [String] {
+    var results = [String]()
+
+    for ex in stretchExercises {
+      results.append(ex.name)
+    }
+
+    return results
   }
 
-  func getWeightExercise(name: String) -> WeightExercise {
-    return weightExercises[name]!
+  func weightExerciseKeys() -> [String] {
+    var results = [String]()
+
+    for ex in weightExercises {
+      results.append(ex.name)
+    }
+
+    return results
   }
+
+  func loadExercises() {
+    if let cardioExs = NSKeyedUnarchiver.unarchiveObject(withFile: FilePaths.cardioURL.path) as? [CardioExercise] {
+      cardioExercises = cardioExs
+    }
+
+    if let stretchExs = NSKeyedUnarchiver.unarchiveObject(withFile: FilePaths.stretchURL.path) as? [StretchExercise] {
+      stretchExercises = stretchExs
+    }
+
+    if let weightExs = NSKeyedUnarchiver.unarchiveObject(withFile: FilePaths.weightsURL.path) as? [WeightExercise] {
+      weightExercises = weightExs
+    }
+  }
+
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Vidushi Ojha. All rights reserved.
 //
 
+import os.log
 import UIKit
 
 class WeightExerciseViewController: UIViewController {
@@ -23,6 +24,8 @@ class WeightExerciseViewController: UIViewController {
   @IBOutlet weak var weightField: UITextField!
   @IBOutlet weak var setsField: UITextField!
   @IBOutlet weak var repsField: UITextField!
+
+  let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,11 +70,22 @@ class WeightExerciseViewController: UIViewController {
 
     newWeightExercise.addDataPoint(date: datePicker.selectedDate, weight: weight, sets: sets, reps: reps)
 
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.exercises?.addExercise(exercise: newWeightExercise)
+
+    saveWeightExercises()
 
     let landingVC = LandingPageViewController()
     self.navigationController?.pushViewController(landingVC, animated: true)
+  }
+
+  private func saveWeightExercises() {
+    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.weightExercises)!, toFile: FilePaths.weightsURL.path)
+
+    if isSuccessfulSave {
+      os_log("Weight Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Weight Exercises... ", log: OSLog.default, type: .error)
+    }
   }
 
 }

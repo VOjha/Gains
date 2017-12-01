@@ -6,6 +6,7 @@
 //  Copyright © 2017 Vidushi Ojha. All rights reserved.
 //
 
+import os.log
 import UIKit
 
 enum SelectedType {
@@ -47,6 +48,7 @@ class EnterDataViewController: UIViewController {
   var selectedType: SelectedType?
 
   let inputViewHeight = CGFloat(82.0)
+  let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -169,6 +171,14 @@ class EnterDataViewController: UIViewController {
     let secs = Double(self.secondsTextField.text!) ?? 0
 
     cardioEx.addDataPoint(date: datePicker.selectedDate, minutes: mins, seconds: secs)
+
+    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.cardioExercises)!, toFile: FilePaths.cardioURL.path)
+
+    if isSuccessfulSave {
+      os_log("Cardio Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Cardio Exercises... ", log: OSLog.default, type: .error)
+    }
   }
 
   func saveStretchExercise() {
@@ -178,6 +188,14 @@ class EnterDataViewController: UIViewController {
     let reps = Double(self.repsTextField.text!) ?? 0
 
     stretchEx.addDataPoint(date: datePicker.selectedDate, sets: sets, reps: reps)
+
+    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.stretchExercises)!, toFile: FilePaths.stretchURL.path)
+
+    if isSuccessfulSave {
+      os_log("Stretch Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Stretch Exercises... ", log: OSLog.default, type: .error)
+    }
   }
 
   func saveWeightExercise() {
@@ -188,6 +206,14 @@ class EnterDataViewController: UIViewController {
     let weight = Double(self.weightTextField.text!) ?? 0
 
     weightEx.addDataPoint(date: datePicker.selectedDate, weight: weight, sets: sets, reps: reps)
+
+    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.weightExercises)!, toFile: FilePaths.weightsURL.path)
+
+    if isSuccessfulSave {
+      os_log("Weight Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Weight Exercises... ", log: OSLog.default, type: .error)
+    }
   }
 
 }

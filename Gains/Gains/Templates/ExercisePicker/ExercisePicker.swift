@@ -58,9 +58,11 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     pickerView.reloadAllComponents()
     pickerView.selectRow(0, inComponent: 0, animated: false)
 
-    cardioKeys = Array((appDelegate.exercises?.cardioExercises.keys)!).sorted()
-    stretchKeys = Array((appDelegate.exercises?.stretchExercises.keys)!).sorted()
-    weightKeys = Array((appDelegate.exercises?.weightExercises.keys)!).sorted()
+    appDelegate.exercises?.loadExercises()
+
+    cardioKeys = (appDelegate.exercises?.cardioExerciseKeys())!
+    stretchKeys = (appDelegate.exercises?.stretchExerciseKeys())!
+    weightKeys = (appDelegate.exercises?.weightExerciseKeys())!
   }
 
   func setSelectedType(selectType: SelectedType) {
@@ -74,17 +76,15 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
   }
 
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
     switch selectedType {
     case SelectedType.CARDIO:
-      let numCardio = (appDelegate.exercises?.numCardioExercises())!
+      let numCardio = cardioKeys.count
       return (numCardio == 0) ? 1 : numCardio
     case SelectedType.STRETCH:
-      let numStretch = (appDelegate.exercises?.numStretchExercises())!
+      let numStretch = stretchKeys.count
       return (numStretch == 0) ? 1 : numStretch
     case SelectedType.WEIGHT:
-      let numWeight = (appDelegate.exercises?.numWeightExercises())!
+      let numWeight = weightKeys.count
       return (numWeight == 0) ? 1 : numWeight
     default:
       return 1
@@ -106,13 +106,13 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     var title = ""
     switch selectedType {
     case SelectedType.CARDIO:
-      let numCardio = (appDelegate.exercises?.numCardioExercises())!
+      let numCardio = cardioKeys.count
       title = (numCardio == 0) ? "No Cardio Exercises" : cardioKeys[row]
     case SelectedType.STRETCH:
-      let numStretch = (appDelegate.exercises?.numStretchExercises())!
+      let numStretch = stretchKeys.count
       title = (numStretch == 0) ? "No Stretch Exercises" : stretchKeys[row]
     case SelectedType.WEIGHT:
-      let numWeight = (appDelegate.exercises?.numWeightExercises())!
+      let numWeight = weightKeys.count
       title = (numWeight == 0) ? "No Weight Exercises" : weightKeys[row]
     default:
       title = "No Type Selected"
@@ -123,22 +123,21 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
   }
 
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    let selectedIndex = pickerView.selectedRow(inComponent: 0)
     let exercisesStore = appDelegate.exercises
 
     switch selectedType {
     case SelectedType.CARDIO:
-      let numCardio = (appDelegate.exercises?.numCardioExercises())!
+      let numCardio = cardioKeys.count
       if (numCardio == 0) { break }
-      selectedExercise = (exercisesStore?.getCardioExercise(name: cardioKeys[selectedIndex]))!
+      selectedExercise = (exercisesStore?.getCardioExercise(index: row))!
     case SelectedType.STRETCH:
-      let numStretch = (appDelegate.exercises?.numStretchExercises())!
+      let numStretch = stretchKeys.count
       if (numStretch == 0) { break }
-      selectedExercise = (exercisesStore?.getStretchExercise(name: stretchKeys[selectedIndex]))!
+      selectedExercise = (exercisesStore?.getStretchExercise(index: row))!
     case SelectedType.WEIGHT:
-      let numWeight = (appDelegate.exercises?.numWeightExercises())!
+      let numWeight = weightKeys.count
       if (numWeight == 0) { break }
-      selectedExercise = (exercisesStore?.getWeightExercise(name: weightKeys[selectedIndex]))!
+      selectedExercise = (exercisesStore?.getWeightExercise(index: row))!
     default:
       break
     }
