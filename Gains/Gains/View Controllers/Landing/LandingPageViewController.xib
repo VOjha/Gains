@@ -45,6 +45,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv0-ZH-5Xc" userLabel="View Stats Button">
                     <rect key="frame" x="87" y="380" width="200" height="40"/>
                     <state key="normal" title="VIEW_STATS"/>
+                    <connections>
+                        <action selector="didClickViewStats:" destination="-1" eventType="touchUpInside" id="cy7-gW-2fh"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ9-f2-mUP" userLabel="New Exercise Button">
                     <rect key="frame" x="87" y="444" width="200" height="40"/>

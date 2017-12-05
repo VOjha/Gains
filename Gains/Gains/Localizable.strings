@@ -38,3 +38,6 @@
 
 // Enter Workout Data Page
 "DATE" = "Date";
+
+// Select Exercise Page
+"SELECT" = "Select & Continue";

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewExerciseStatsViewController" customModule="Gains" customModuleProvider="target">
+            <connections>
+                <outlet property="barChartView" destination="5Mr-RM-gJY" id="S2g-1L-dDh"/>
+                <outlet property="exerciseNameLabel" destination="V8D-2U-CY5" id="64o-Yg-mJu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="textTitles" destination="V8D-2U-CY5" collectionClass="NSMutableArray" id="Zf6-Og-Lq0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-Zm-kvK">
+                    <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE_NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8D-2U-CY5" userLabel="Exercise Name Label">
+                            <rect key="frame" x="0.0" y="30" width="375" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Mr-RM-gJY" customClass="BarChartView" customModule="Charts">
+                            <rect key="frame" x="30" y="81" width="315" height="300"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="MXl-Ir-jL6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5Mr-RM-gJY" firstAttribute="top" secondItem="V8D-2U-CY5" secondAttribute="bottom" constant="30" id="CrL-fg-yy8"/>
+                        <constraint firstItem="5Mr-RM-gJY" firstAttribute="leading" secondItem="i2u-Zm-kvK" secondAttribute="leading" constant="30" id="KOb-IP-Mss"/>
+                        <constraint firstItem="V8D-2U-CY5" firstAttribute="top" secondItem="i2u-Zm-kvK" secondAttribute="top" constant="30" id="bvZ-Am-iQA"/>
+                        <constraint firstItem="V8D-2U-CY5" firstAttribute="centerX" secondItem="i2u-Zm-kvK" secondAttribute="centerX" id="gD8-k4-kpe"/>
+                        <constraint firstItem="V8D-2U-CY5" firstAttribute="width" secondItem="i2u-Zm-kvK" secondAttribute="width" id="kko-9z-yFs"/>
+                        <constraint firstItem="5Mr-RM-gJY" firstAttribute="centerX" secondItem="i2u-Zm-kvK" secondAttribute="centerX" id="mF8-yV-d8c"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i2u-Zm-kvK" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DTy-sc-ERv"/>
+                <constraint firstItem="i2u-Zm-kvK" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="O3f-DY-zuJ"/>
+                <constraint firstItem="i2u-Zm-kvK" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="dZB-6V-Yfu"/>
+                <constraint firstItem="i2u-Zm-kvK" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="zqJ-h0-JKG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
