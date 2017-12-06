@@ -28,6 +28,8 @@
                 <outletCollection property="selectButton" destination="wrz-CK-d4q" collectionClass="NSMutableArray" id="G7h-2V-nri"/>
                 <outletCollection property="selectButton" destination="wrz-CK-d4q" collectionClass="NSMutableArray" id="P3l-dT-16r"/>
                 <outletCollection property="textItems" destination="wrz-CK-d4q" collectionClass="NSMutableArray" id="mmd-Ac-aZe"/>
+                <outletCollection property="textItems" destination="REd-jH-YgS" collectionClass="NSMutableArray" id="KeE-vH-sXn"/>
+                <outletCollection property="selectButton" destination="REd-jH-YgS" collectionClass="NSMutableArray" id="LW1-K9-nhC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -76,9 +78,17 @@
                         <action selector="didClickSelect:" destination="-1" eventType="touchUpInside" id="vsv-dD-3aa"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REd-jH-YgS" userLabel="Clear Button">
+                    <rect key="frame" x="0.0" y="351" width="375" height="30"/>
+                    <state key="normal" title="CLEAR"/>
+                    <connections>
+                        <action selector="didClickClear:" destination="-1" eventType="touchUpInside" id="KBf-RZ-no4"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="REd-jH-YgS" firstAttribute="top" secondItem="wrz-CK-d4q" secondAttribute="bottom" constant="30" id="6s1-tm-cb3"/>
                 <constraint firstItem="Msu-kQ-sWe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7YO-WN-Oes"/>
                 <constraint firstItem="wrz-CK-d4q" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="8Hf-yy-lcz"/>
                 <constraint firstItem="0Ll-Ns-h3S" firstAttribute="width" secondItem="uBk-h5-SZV" secondAttribute="width" id="94U-E5-ugT"/>
@@ -86,6 +96,7 @@
                 <constraint firstItem="uBk-h5-SZV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Fa0-GL-oOS"/>
                 <constraint firstItem="uBk-h5-SZV" firstAttribute="leading" secondItem="nYE-RB-s22" secondAttribute="trailing" id="FeV-Ah-98G"/>
                 <constraint firstItem="Msu-kQ-sWe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Hww-yg-6o8"/>
+                <constraint firstItem="REd-jH-YgS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="IJ8-WJ-us1"/>
                 <constraint firstItem="nYE-RB-s22" firstAttribute="centerY" secondItem="uBk-h5-SZV" secondAttribute="centerY" id="J1b-P5-4bR"/>
                 <constraint firstItem="wrz-CK-d4q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="QOB-mk-cUV"/>
                 <constraint firstItem="jZ7-tN-oLY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Qma-Al-QZz"/>
@@ -95,6 +106,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Ll-Ns-h3S" secondAttribute="trailing" id="Tqf-5a-0cg"/>
                 <constraint firstItem="jZ7-tN-oLY" firstAttribute="top" secondItem="uBk-h5-SZV" secondAttribute="bottom" constant="10" id="W9q-kM-zMa"/>
                 <constraint firstItem="nYE-RB-s22" firstAttribute="width" secondItem="uBk-h5-SZV" secondAttribute="width" id="X8R-EG-UIi"/>
+                <constraint firstItem="REd-jH-YgS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Yup-6M-Xge"/>
                 <constraint firstItem="Msu-kQ-sWe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="ZUP-i7-X3q"/>
                 <constraint firstItem="wrz-CK-d4q" firstAttribute="top" secondItem="jZ7-tN-oLY" secondAttribute="bottom" constant="30" id="qDp-Q7-RrZ"/>
                 <constraint firstItem="0Ll-Ns-h3S" firstAttribute="leading" secondItem="uBk-h5-SZV" secondAttribute="trailing" id="vxS-k0-ZfF"/>

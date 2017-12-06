@@ -88,4 +88,10 @@ class Exercises {
     }
   }
 
+  func clearExercises() {
+    self.cardioExercises.removeAll()
+    self.stretchExercises.removeAll()
+    self.weightExercises.removeAll()
+  }
+
 }

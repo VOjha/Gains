@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class ViewStatsViewController: UIViewController {
 
@@ -21,6 +22,8 @@ class ViewStatsViewController: UIViewController {
   @IBOutlet weak var exercisePicker: ExercisePicker!
 
   var selectedType: SelectedType?
+
+  let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +81,33 @@ class ViewStatsViewController: UIViewController {
     let viewExerciseVC = ViewExerciseStatsViewController()
     viewExerciseVC.setExercise(exercise: exercisePicker.selectedExercise)
     navigationController?.pushViewController(viewExerciseVC, animated: true)
+  }
+
+  @IBAction func didClickClear(_ sender: Any) {
+    appDelegate.exercises?.clearExercises()
+
+    let isSuccessfulSaveCardio = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.cardioExercises)!, toFile: FilePaths.cardioURL.path)
+    if isSuccessfulSaveCardio {
+      os_log("Cardio Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Cardio Exercises... ", log: OSLog.default, type: .error)
+    }
+
+    let isSuccessfulSaveStretch = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.stretchExercises)!, toFile: FilePaths.stretchURL.path)
+    if isSuccessfulSaveStretch {
+      os_log("Stretch Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Stretch Exercises... ", log: OSLog.default, type: .error)
+    }
+
+    let isSuccessfulSaveWeight = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.weightExercises)!, toFile: FilePaths.weightsURL.path)
+    if isSuccessfulSaveWeight {
+      os_log("Weight Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Weight Exercises... ", log: OSLog.default, type: .error)
+    }
+
+    navigationController?.popViewController(animated: true)
   }
 
 }
