@@ -108,6 +108,7 @@ class EnterDataViewController: UIViewController {
 
   func loadDataEntryView() {
     exercisePicker.setSelectedType(selectType: selectedType!)
+    exercisePicker.pickExerciseAtIndex(index: 0)
     exercisePicker.reload()
 
     setUpDataEntryForSelectedType()

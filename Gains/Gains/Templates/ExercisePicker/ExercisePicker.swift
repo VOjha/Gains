@@ -20,6 +20,8 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
   var stretchKeys: [String]
   var weightKeys: [String]
 
+  var exercisesStore: Exercises
+
   let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
   override init(frame: CGRect) {
@@ -29,6 +31,8 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     cardioKeys = []
     stretchKeys = []
     weightKeys = []
+
+    exercisesStore = Exercises()
 
     super.init(frame: frame)
     commonInit()
@@ -41,6 +45,8 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     cardioKeys = []
     stretchKeys = []
     weightKeys = []
+
+    exercisesStore = Exercises()
 
     super.init(coder: aDecoder)
     commonInit()
@@ -63,6 +69,9 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     cardioKeys = (appDelegate.exercises?.cardioExerciseKeys())!
     stretchKeys = (appDelegate.exercises?.stretchExerciseKeys())!
     weightKeys = (appDelegate.exercises?.weightExerciseKeys())!
+
+    exercisesStore = appDelegate.exercises!
+    pickExerciseAtIndex(index: 0)
   }
 
   func setSelectedType(selectType: SelectedType) {
@@ -123,21 +132,23 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
   }
 
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    let exercisesStore = appDelegate.exercises
+    pickExerciseAtIndex(index: row)
+  }
 
+  func pickExerciseAtIndex(index: Int) {
     switch selectedType {
     case SelectedType.CARDIO:
       let numCardio = cardioKeys.count
       if (numCardio == 0) { break }
-      selectedExercise = (exercisesStore?.getCardioExercise(index: row))!
+      selectedExercise = (exercisesStore.getCardioExercise(index: index))
     case SelectedType.STRETCH:
       let numStretch = stretchKeys.count
       if (numStretch == 0) { break }
-      selectedExercise = (exercisesStore?.getStretchExercise(index: row))!
+      selectedExercise = (exercisesStore.getStretchExercise(index: index))
     case SelectedType.WEIGHT:
       let numWeight = weightKeys.count
       if (numWeight == 0) { break }
-      selectedExercise = (exercisesStore?.getWeightExercise(index: row))!
+      selectedExercise = (exercisesStore.getWeightExercise(index: index))
     default:
       break
     }

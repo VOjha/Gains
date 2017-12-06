@@ -70,6 +70,7 @@ class ViewStatsViewController: UIViewController {
 
   func loadExercisePicker() {
     exercisePicker.setSelectedType(selectType: selectedType!)
+    exercisePicker.pickExerciseAtIndex(index: 0)
     exercisePicker.reload()
   }
 
