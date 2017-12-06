@@ -40,6 +40,7 @@
 		A60A4BA81FD225A4002468F6 /* ViewStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60A4BA61FD225A4002468F6 /* ViewStatsViewController.xib */; };
 		A60A4BAC1FD61222002468F6 /* ViewExerciseStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60A4BAA1FD61222002468F6 /* ViewExerciseStatsViewController.swift */; };
 		A60A4BAD1FD61222002468F6 /* ViewExerciseStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60A4BAB1FD61222002468F6 /* ViewExerciseStatsViewController.xib */; };
+		A64A2EB81FD8A29500CC52AC /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A2EB71FD8A29500CC52AC /* BalloonMarker.swift */; };
 		A67DFC211FCF629700625478 /* ExercisePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DFC201FCF629700625478 /* ExercisePicker.swift */; };
 		A67DFC251FCF785400625478 /* ExercisePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67DFC241FCF785400625478 /* ExercisePicker.xib */; };
 		A6CD42CD1FCCECAA0053029D /* EnterDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */; };
@@ -83,6 +84,7 @@
 		A60A4BA61FD225A4002468F6 /* ViewStatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewStatsViewController.xib; sourceTree = "<group>"; };
 		A60A4BAA1FD61222002468F6 /* ViewExerciseStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExerciseStatsViewController.swift; sourceTree = "<group>"; };
 		A60A4BAB1FD61222002468F6 /* ViewExerciseStatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewExerciseStatsViewController.xib; sourceTree = "<group>"; };
+		A64A2EB71FD8A29500CC52AC /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		A67DFC201FCF629700625478 /* ExercisePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePicker.swift; sourceTree = "<group>"; };
 		A67DFC241FCF785400625478 /* ExercisePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExercisePicker.xib; sourceTree = "<group>"; };
 		A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDataViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		A604010E1FB6502C00E2E4DF /* Gains */ = {
 			isa = PBXGroup;
 			children = (
+				A64A2EB61FD8A28000CC52AC /* ChartsSupplement */,
 				A604011B1FB6502D00E2E4DF /* Info.plist */,
 				A604012C1FB66A5500E2E4DF /* Localizable.strings */,
 				A604012E1FB66DA700E2E4DF /* Helpers */,
@@ -280,6 +283,14 @@
 				A60A4BAB1FD61222002468F6 /* ViewExerciseStatsViewController.xib */,
 			);
 			path = ViewExerciseStats;
+			sourceTree = "<group>";
+		};
+		A64A2EB61FD8A28000CC52AC /* ChartsSupplement */ = {
+			isa = PBXGroup;
+			children = (
+				A64A2EB71FD8A29500CC52AC /* BalloonMarker.swift */,
+			);
+			path = ChartsSupplement;
 			sourceTree = "<group>";
 		};
 		A67DFC1E1FCF5F6500625478 /* CustomDatePicker */ = {
@@ -471,6 +482,7 @@
 				A67DFC211FCF629700625478 /* ExercisePicker.swift in Sources */,
 				A604013D1FB6876F00E2E4DF /* WeightExercise.swift in Sources */,
 				A6CD42CD1FCCECAA0053029D /* EnterDataViewController.swift in Sources */,
+				A64A2EB81FD8A29500CC52AC /* BalloonMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +534,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

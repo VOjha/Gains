@@ -42,3 +42,6 @@
 // Select Exercise Page
 "SELECT" = "Select & Continue";
 "CLEAR" = "Clear All Workout Data";
+
+// View Exercise Stats Page
+"HOME" = "Return Home";

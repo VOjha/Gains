@@ -26,6 +26,8 @@ struct Fonts {
   static let enterDataTitleFont = UIFont(name: "Rubik-Bold", size: 30)
   static let enterDataTypeFont = UIFont(name: "Rubik-Regular", size: 25)
   static let selectedTypeFont = UIFont(name: "Rubik-Bold", size: 25)
+  static let chartDataFont = UIFont(name: "Rubik-Regular", size: 10)
+  static let chartLegendFont = UIFont(name: "Rubik-Regular", size: 12)
 }
 
 struct DatePickerDefaults {
