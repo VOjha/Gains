@@ -6,6 +6,7 @@
 //  Copyright © 2017 Vidushi Ojha. All rights reserved.
 //
 
+import os.log
 import UIKit
 
 class CardioExerciseViewController: UIViewController {
@@ -22,6 +23,8 @@ class CardioExerciseViewController: UIViewController {
   @IBOutlet weak var exerciseNameField: UITextField!
   @IBOutlet weak var minutesField: UITextField!
   @IBOutlet weak var secondsField: UITextField!
+
+  let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +70,21 @@ class CardioExerciseViewController: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.exercises?.addExercise(exercise: newCardioExercise)
+
+    saveCardioExercises()
+
+    let landingVC = LandingPageViewController()
+    self.navigationController?.pushViewController(landingVC, animated: true)
+  }
+
+  private func saveCardioExercises() {
+    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.cardioExercises)!, toFile: FilePaths.cardioURL.path)
+
+    if isSuccessfulSave {
+      os_log("Cardio Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Cardio Exercises... ", log: OSLog.default, type: .error)
+    }
   }
 
 }

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewStatsViewController" customModule="Gains" customModuleProvider="target">
+            <connections>
+                <outlet property="cardioButton" destination="nYE-RB-s22" id="cdA-7L-w8c"/>
+                <outlet property="exercisePicker" destination="jZ7-tN-oLY" id="phC-Va-6sl"/>
+                <outlet property="stretchButton" destination="uBk-h5-SZV" id="fRv-Zw-kxk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weightButton" destination="0Ll-Ns-h3S" id="7ph-yr-vHe"/>
+                <outletCollection property="textItems" destination="Msu-kQ-sWe" collectionClass="NSMutableArray" id="dPv-ca-4o8"/>
+                <outletCollection property="typeButtons" destination="uBk-h5-SZV" collectionClass="NSMutableArray" id="TEs-XJ-o3B"/>
+                <outletCollection property="textItems" destination="0Ll-Ns-h3S" collectionClass="NSMutableArray" id="2ue-tu-i7D"/>
+                <outletCollection property="textTitles" destination="Msu-kQ-sWe" collectionClass="NSMutableArray" id="LkW-Ra-BXx"/>
+                <outletCollection property="textItems" destination="nYE-RB-s22" collectionClass="NSMutableArray" id="Xta-s3-bPK"/>
+                <outletCollection property="typeButtons" destination="nYE-RB-s22" collectionClass="NSMutableArray" id="P43-OD-oWg"/>
+                <outletCollection property="textItems" destination="uBk-h5-SZV" collectionClass="NSMutableArray" id="sJ9-xk-Fh8"/>
+                <outletCollection property="typeButtons" destination="0Ll-Ns-h3S" collectionClass="NSMutableArray" id="tae-St-F3E"/>
+                <outletCollection property="selectButton" destination="wrz-CK-d4q" collectionClass="NSMutableArray" id="G7h-2V-nri"/>
+                <outletCollection property="selectButton" destination="wrz-CK-d4q" collectionClass="NSMutableArray" id="P3l-dT-16r"/>
+                <outletCollection property="textItems" destination="wrz-CK-d4q" collectionClass="NSMutableArray" id="mmd-Ac-aZe"/>
+                <outletCollection property="textItems" destination="REd-jH-YgS" collectionClass="NSMutableArray" id="KeE-vH-sXn"/>
+                <outletCollection property="selectButton" destination="REd-jH-YgS" collectionClass="NSMutableArray" id="LW1-K9-nhC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW_STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msu-kQ-sWe" userLabel="View Stats Label">
+                    <rect key="frame" x="0.0" y="50" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYE-RB-s22" userLabel="Cardio Button">
+                    <rect key="frame" x="0.0" y="101" width="125" height="30"/>
+                    <state key="normal" title="CARDIO_TYPE"/>
+                    <connections>
+                        <action selector="didClickCardio:" destination="-1" eventType="touchUpInside" id="ioH-7L-A1Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-h5-SZV" userLabel="Stretch Button">
+                    <rect key="frame" x="125" y="101" width="125" height="30"/>
+                    <state key="normal" title="STRETCH_TYPE"/>
+                    <connections>
+                        <action selector="didClickStretch:" destination="-1" eventType="touchUpInside" id="weE-H9-52T"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-Ns-h3S" userLabel="Weight Button">
+                    <rect key="frame" x="250" y="101" width="125" height="30"/>
+                    <state key="normal" title="WEIGHT_TYPE"/>
+                    <connections>
+                        <action selector="didClickWeight:" destination="-1" eventType="touchUpInside" id="kP3-QU-5VQ"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-tN-oLY" customClass="ExercisePicker" customModule="Gains" customModuleProvider="target">
+                    <rect key="frame" x="40" y="141" width="294" height="120"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="zcY-Y4-5tB"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrz-CK-d4q" userLabel="Select Button">
+                    <rect key="frame" x="0.0" y="291" width="375" height="30"/>
+                    <state key="normal" title="SELECT"/>
+                    <connections>
+                        <action selector="didClickSelect:" destination="-1" eventType="touchUpInside" id="vsv-dD-3aa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REd-jH-YgS" userLabel="Clear Button">
+                    <rect key="frame" x="0.0" y="351" width="375" height="30"/>
+                    <state key="normal" title="CLEAR"/>
+                    <connections>
+                        <action selector="didClickClear:" destination="-1" eventType="touchUpInside" id="KBf-RZ-no4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="REd-jH-YgS" firstAttribute="top" secondItem="wrz-CK-d4q" secondAttribute="bottom" constant="30" id="6s1-tm-cb3"/>
+                <constraint firstItem="Msu-kQ-sWe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7YO-WN-Oes"/>
+                <constraint firstItem="wrz-CK-d4q" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="8Hf-yy-lcz"/>
+                <constraint firstItem="0Ll-Ns-h3S" firstAttribute="width" secondItem="uBk-h5-SZV" secondAttribute="width" id="94U-E5-ugT"/>
+                <constraint firstItem="nYE-RB-s22" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cyb-eP-DPD"/>
+                <constraint firstItem="uBk-h5-SZV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Fa0-GL-oOS"/>
+                <constraint firstItem="uBk-h5-SZV" firstAttribute="leading" secondItem="nYE-RB-s22" secondAttribute="trailing" id="FeV-Ah-98G"/>
+                <constraint firstItem="Msu-kQ-sWe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Hww-yg-6o8"/>
+                <constraint firstItem="REd-jH-YgS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="IJ8-WJ-us1"/>
+                <constraint firstItem="nYE-RB-s22" firstAttribute="centerY" secondItem="uBk-h5-SZV" secondAttribute="centerY" id="J1b-P5-4bR"/>
+                <constraint firstItem="wrz-CK-d4q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="QOB-mk-cUV"/>
+                <constraint firstItem="jZ7-tN-oLY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Qma-Al-QZz"/>
+                <constraint firstItem="jZ7-tN-oLY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Qzu-qh-qBn"/>
+                <constraint firstItem="0Ll-Ns-h3S" firstAttribute="centerY" secondItem="uBk-h5-SZV" secondAttribute="centerY" id="RKk-f5-uhC"/>
+                <constraint firstItem="uBk-h5-SZV" firstAttribute="top" secondItem="Msu-kQ-sWe" secondAttribute="bottom" constant="30" id="Syg-rc-1BR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Ll-Ns-h3S" secondAttribute="trailing" id="Tqf-5a-0cg"/>
+                <constraint firstItem="jZ7-tN-oLY" firstAttribute="top" secondItem="uBk-h5-SZV" secondAttribute="bottom" constant="10" id="W9q-kM-zMa"/>
+                <constraint firstItem="nYE-RB-s22" firstAttribute="width" secondItem="uBk-h5-SZV" secondAttribute="width" id="X8R-EG-UIi"/>
+                <constraint firstItem="REd-jH-YgS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Yup-6M-Xge"/>
+                <constraint firstItem="Msu-kQ-sWe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="ZUP-i7-X3q"/>
+                <constraint firstItem="wrz-CK-d4q" firstAttribute="top" secondItem="jZ7-tN-oLY" secondAttribute="bottom" constant="30" id="qDp-Q7-RrZ"/>
+                <constraint firstItem="0Ll-Ns-h3S" firstAttribute="leading" secondItem="uBk-h5-SZV" secondAttribute="trailing" id="vxS-k0-ZfF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

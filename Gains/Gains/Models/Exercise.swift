@@ -13,7 +13,7 @@ struct ExerciseType {
   var icon: UIImage
 }
 
-class Exercise {
+class Exercise: NSObject {
   var name: String
   var type: ExerciseType
 

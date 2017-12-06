@@ -34,9 +34,19 @@ class LandingPageViewController: UIViewController {
     styleButtons(buttons: textButtons!, font: Fonts.buttonFont!, textColor: Colors.themeBlueColor)
   }
 
+  @IBAction func didClickViewStats(_ sender: Any) {
+    let viewStatsVC = ViewStatsViewController()
+    self.navigationController?.pushViewController(viewStatsVC, animated: true)
+  }
+
   @IBAction func didClickNewExercise(_ sender: Any) {
     let newExerciseVC = NewExerciseTypeViewController()
     self.navigationController?.pushViewController(newExerciseVC, animated: true)
+  }
+
+  @IBAction func didClickEnterData(_ sender: Any) {
+    let enterDataVC = EnterDataViewController()
+    self.navigationController?.pushViewController(enterDataVC, animated: true)
   }
 
 }

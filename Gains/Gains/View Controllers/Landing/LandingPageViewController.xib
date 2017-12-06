@@ -45,6 +45,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv0-ZH-5Xc" userLabel="View Stats Button">
                     <rect key="frame" x="87" y="380" width="200" height="40"/>
                     <state key="normal" title="VIEW_STATS"/>
+                    <connections>
+                        <action selector="didClickViewStats:" destination="-1" eventType="touchUpInside" id="cy7-gW-2fh"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ9-f2-mUP" userLabel="New Exercise Button">
                     <rect key="frame" x="87" y="444" width="200" height="40"/>
@@ -60,6 +63,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gc-Jf-SYo" userLabel="Enter Data Button">
                     <rect key="frame" x="87" y="508" width="200" height="40"/>
                     <state key="normal" title="ENTER_DATA"/>
+                    <connections>
+                        <action selector="didClickEnterData:" destination="-1" eventType="touchUpInside" id="QbB-L8-Fdh"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.9882352941176471" green="0.81960784313725488" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>

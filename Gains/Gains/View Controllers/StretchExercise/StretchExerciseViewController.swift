@@ -6,6 +6,7 @@
 //  Copyright © 2017 Vidushi Ojha. All rights reserved.
 //
 
+import os.log
 import UIKit
 
 class StretchExerciseViewController: UIViewController {
@@ -21,6 +22,8 @@ class StretchExerciseViewController: UIViewController {
   @IBOutlet weak var datePicker: CustomDatePicker!
   @IBOutlet weak var setsField: UITextField!
   @IBOutlet weak var repsField: UITextField!
+
+  let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +66,21 @@ class StretchExerciseViewController: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.exercises?.addExercise(exercise: newStretchExercise)
+
+    saveStretchExercises()
+
+    let landingVC = LandingPageViewController()
+    self.navigationController?.pushViewController(landingVC, animated: true)
+  }
+
+  private func saveStretchExercises() {
+    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject((appDelegate.exercises?.stretchExercises)!, toFile: FilePaths.stretchURL.path)
+
+    if isSuccessfulSave {
+      os_log("Stretch Exercises successfully saved.", log: OSLog.default, type: .debug)
+    } else {
+      os_log("Failed to save Stretch Exercises... ", log: OSLog.default, type: .error)
+    }
   }
 
 }

@@ -35,3 +35,13 @@
 // Sets & Reps Input
 "SETS" = "Sets";
 "REPS" = "Reps";
+
+// Enter Workout Data Page
+"DATE" = "Date";
+
+// Select Exercise Page
+"SELECT" = "Select & Continue";
+"CLEAR" = "Clear All Workout Data";
+
+// View Exercise Stats Page
+"HOME" = "Return Home";
