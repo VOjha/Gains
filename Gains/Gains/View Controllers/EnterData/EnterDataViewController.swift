@@ -53,6 +53,7 @@ class EnterDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataEntryView.isHidden = true
+        selectedType = SelectedType.NONE
 
         styleView()
     }
@@ -84,7 +85,7 @@ class EnterDataViewController: UIViewController {
 
   @IBAction func didClickCardio(_ sender: Any) {
     styleButtons(buttons: [cardioButton], font: Fonts.selectedTypeFont!, textColor: Colors.themeBlueColor)
-    styleButtons(buttons: [stretchButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColorFaded)
+    styleButtons(buttons: [stretchButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColor)
     selectedType = SelectedType.CARDIO
 
     loadDataEntryView()
@@ -92,7 +93,7 @@ class EnterDataViewController: UIViewController {
 
   @IBAction func didClickStretch(_ sender: Any) {
     styleButtons(buttons: [stretchButton], font: Fonts.selectedTypeFont!, textColor: Colors.themeBlueColor)
-    styleButtons(buttons: [cardioButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColorFaded)
+    styleButtons(buttons: [cardioButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColor)
     selectedType = SelectedType.STRETCH
 
     loadDataEntryView()
@@ -100,7 +101,7 @@ class EnterDataViewController: UIViewController {
 
   @IBAction func didClickWeight(_ sender: Any) {
     styleButtons(buttons: [weightButton], font: Fonts.selectedTypeFont!, textColor: Colors.themeBlueColor)
-    styleButtons(buttons: [stretchButton, cardioButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColorFaded)
+    styleButtons(buttons: [stretchButton, cardioButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColor)
     selectedType = SelectedType.WEIGHT
 
     loadDataEntryView()
@@ -150,15 +151,22 @@ class EnterDataViewController: UIViewController {
   }
 
   @IBAction func didClickSave(_ sender: Any) {
-    switch selectedType! {
-    case SelectedType.CARDIO:
+    let exercise = exercisePicker.selectedExercise
+
+    switch exercise.type.name {
+    case noneType.name:
+      let alertController = UIAlertController(title: "Error", message: "Must select an exercise to save data!", preferredStyle: .alert)
+      let defaultAction = UIAlertAction(title: "Close", style: .default, handler: nil)
+      alertController.addAction(defaultAction)
+      present(alertController, animated: true, completion: nil)
+    case cardioType.name:
       saveCardioExercise()
-    case SelectedType.STRETCH:
+    case stretchType.name:
       saveStretchExercise()
-    case SelectedType.WEIGHT:
+    case weightType.name:
       saveWeightExercise()
     default:
-      break
+      return
     }
 
     let landingVC = LandingPageViewController()

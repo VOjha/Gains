@@ -49,7 +49,7 @@ class ViewStatsViewController: UIViewController {
 
   @IBAction func didClickCardio(_ sender: Any) {
     styleButtons(buttons: [cardioButton], font: Fonts.selectedTypeFont!, textColor: Colors.themeBlueColor)
-    styleButtons(buttons: [stretchButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColorFaded)
+    styleButtons(buttons: [stretchButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColor)
     selectedType = SelectedType.CARDIO
 
     loadExercisePicker()
@@ -57,7 +57,7 @@ class ViewStatsViewController: UIViewController {
 
   @IBAction func didClickStretch(_ sender: Any) {
     styleButtons(buttons: [stretchButton], font: Fonts.selectedTypeFont!, textColor: Colors.themeBlueColor)
-    styleButtons(buttons: [cardioButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColorFaded)
+    styleButtons(buttons: [cardioButton, weightButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColor)
     selectedType = SelectedType.STRETCH
 
     loadExercisePicker()
@@ -65,7 +65,7 @@ class ViewStatsViewController: UIViewController {
 
   @IBAction func didClickWeight(_ sender: Any) {
     styleButtons(buttons: [weightButton], font: Fonts.selectedTypeFont!, textColor: Colors.themeBlueColor)
-    styleButtons(buttons: [stretchButton, cardioButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColorFaded)
+    styleButtons(buttons: [stretchButton, cardioButton], font: Fonts.enterDataTypeFont!, textColor: Colors.themeBlueColor)
     selectedType = SelectedType.WEIGHT
 
     loadExercisePicker()
@@ -78,6 +78,13 @@ class ViewStatsViewController: UIViewController {
   }
 
   @IBAction func didClickSelect(_ sender: Any) {
+    if exercisePicker.selectedExercise.type.name == noneType.name {
+      let alertController = UIAlertController(title: "Error", message: "Must select an exercise to view stats!", preferredStyle: .alert)
+      let defaultAction = UIAlertAction(title: "Close", style: .default, handler: nil)
+      alertController.addAction(defaultAction)
+      present(alertController, animated: true, completion: nil)
+    }
+
     let viewExerciseVC = ViewExerciseStatsViewController()
     viewExerciseVC.setExercise(exercise: exercisePicker.selectedExercise)
     navigationController?.pushViewController(viewExerciseVC, animated: true)
