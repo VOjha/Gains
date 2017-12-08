@@ -165,6 +165,7 @@
                             </connections>
                         </button>
                     </subviews>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="8GS-Ut-DvD" firstAttribute="leading" secondItem="KwZ-gC-f6p" secondAttribute="leading" id="1oc-kp-Ayk"/>
                         <constraint firstItem="Zc2-El-kK6" firstAttribute="trailing" secondItem="5C2-dv-M9J" secondAttribute="trailing" id="242-Us-AZq"/>
@@ -210,6 +211,9 @@
                         <constraint firstItem="oE8-rL-XKD" firstAttribute="bottom" secondItem="pv5-N4-C6c" secondAttribute="bottom" id="vVu-K7-hLP"/>
                         <constraint firstItem="Vci-MS-hBB" firstAttribute="leading" secondItem="PWl-Iw-gIW" secondAttribute="trailing" constant="25" id="wZc-lS-LA4"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="NSq-R4-rk9" appends="YES" id="g7m-gj-zRN"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,6 +225,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
+        <tapGestureRecognizer id="NSq-R4-rk9">
+            <connections>
+                <action selector="didTap:" destination="-1" id="jcg-wK-xsK"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="cardio-icon" width="256" height="256"/>

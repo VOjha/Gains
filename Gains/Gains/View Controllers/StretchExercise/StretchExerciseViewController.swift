@@ -83,4 +83,10 @@ class StretchExerciseViewController: UIViewController {
     }
   }
 
+  @IBAction func didTap(_ sender: Any) {
+    for field in textFields! {
+      field.resignFirstResponder()
+    }
+  }
+
 }

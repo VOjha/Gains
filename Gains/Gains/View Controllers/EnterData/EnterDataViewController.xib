@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -370,6 +370,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="bfa-vJ-uEb" firstAttribute="centerX" secondItem="32h-Bt-BrL" secondAttribute="centerX" id="21N-8s-8WE"/>
                         <constraint firstAttribute="trailing" secondItem="cbI-re-EMO" secondAttribute="trailing" id="9GL-18-WyD"/>
@@ -389,6 +390,9 @@
                         <constraint firstItem="Wdb-YA-B74" firstAttribute="leading" secondItem="32h-Bt-BrL" secondAttribute="leading" id="wg7-qW-6Uu"/>
                         <constraint firstItem="bfa-vJ-uEb" firstAttribute="top" secondItem="32h-Bt-BrL" secondAttribute="top" constant="30" id="wpi-oj-zep"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="V7j-5h-beC" appends="YES" id="1Dg-7o-wdG"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -401,5 +405,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="20" y="116"/>
         </view>
+        <tapGestureRecognizer id="V7j-5h-beC">
+            <connections>
+                <action selector="didTap:" destination="-1" id="uql-CC-PDD"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
