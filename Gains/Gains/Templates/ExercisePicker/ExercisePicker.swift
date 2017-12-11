@@ -25,7 +25,7 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
   let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
   override init(frame: CGRect) {
-    selectedExercise = Exercise(name: "Nil", type: cardioType)
+    selectedExercise = Exercise(name: "Nil", type: noneType)
     selectedType = SelectedType.NONE
 
     cardioKeys = []
@@ -39,7 +39,7 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
   }
 
   required init?(coder aDecoder: NSCoder) {
-    selectedExercise = Exercise(name: "Nil", type: cardioType)
+    selectedExercise = Exercise(name: "Nil", type: noneType)
     selectedType = SelectedType.NONE
 
     cardioKeys = []
@@ -124,6 +124,7 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
       let numWeight = weightKeys.count
       title = (numWeight == 0) ? "No Weight Exercises" : weightKeys[row]
     default:
+      selectedExercise = Exercise(name: "Nil", type: noneType)
       title = "No Type Selected"
     }
 
@@ -139,16 +140,25 @@ class ExercisePicker: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
     switch selectedType {
     case SelectedType.CARDIO:
       let numCardio = cardioKeys.count
-      if (numCardio == 0) { break }
-      selectedExercise = (exercisesStore.getCardioExercise(index: index))
+      if (numCardio == 0) {
+        selectedExercise = Exercise(name: "Nil", type: noneType)
+      } else {
+       selectedExercise = (exercisesStore.getCardioExercise(index: index))
+      }
     case SelectedType.STRETCH:
       let numStretch = stretchKeys.count
-      if (numStretch == 0) { break }
-      selectedExercise = (exercisesStore.getStretchExercise(index: index))
+      if (numStretch == 0) {
+        selectedExercise = Exercise(name: "Nil", type: noneType)
+      } else {
+       selectedExercise = (exercisesStore.getStretchExercise(index: index))
+      }
     case SelectedType.WEIGHT:
       let numWeight = weightKeys.count
-      if (numWeight == 0) { break }
-      selectedExercise = (exercisesStore.getWeightExercise(index: index))
+      if (numWeight == 0) {
+        selectedExercise = Exercise(name: "Nil", type: noneType)
+      } else {
+       selectedExercise = (exercisesStore.getWeightExercise(index: index))
+      }
     default:
       break
     }

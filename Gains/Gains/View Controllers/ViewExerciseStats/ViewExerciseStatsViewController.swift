@@ -16,6 +16,7 @@ class ViewExerciseStatsViewController: UIViewController {
   @IBOutlet var textButtons: Array<UIButton>?
 
   @IBOutlet weak var exerciseNameLabel: UILabel!
+  @IBOutlet weak var iconImageView: UIImageView!
   @IBOutlet weak var barChartView: BarChartView!
 
   var selectedExercise: Exercise?
@@ -51,6 +52,9 @@ class ViewExerciseStatsViewController: UIViewController {
 
     // Button
     styleButtons(buttons: textButtons!, font: Fonts.buttonFont!, textColor: Colors.themeBlueColor)
+
+    // Icon
+    iconImageView.image = selectedExercise?.type.icon
 
     switch selectedExercise?.type.name {
     case cardioType.name?:

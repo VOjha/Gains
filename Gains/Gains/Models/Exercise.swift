@@ -13,6 +13,8 @@ struct ExerciseType {
   var icon: UIImage
 }
 
+var noneType = ExerciseType(name: "None", icon: UIImage(named: "none-icon")!)
+
 class Exercise: NSObject {
   var name: String
   var type: ExerciseType

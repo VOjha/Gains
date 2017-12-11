@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -191,6 +191,7 @@
                             </connections>
                         </button>
                     </subviews>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="NIB-Xb-JwU" firstAttribute="trailing" secondItem="mTo-2K-g56" secondAttribute="trailing" id="00C-TL-Nxk"/>
                         <constraint firstItem="XyZ-0P-QWE" firstAttribute="top" secondItem="5aI-py-csd" secondAttribute="bottom" id="1xG-6t-rvw"/>
@@ -245,6 +246,9 @@
                         <constraint firstItem="ED7-nm-RQL" firstAttribute="centerY" secondItem="72j-Er-DzC" secondAttribute="centerY" id="xxg-OT-Nhw"/>
                         <constraint firstItem="Bxr-TG-TEa" firstAttribute="top" secondItem="hLU-ef-hJ6" secondAttribute="bottom" id="ydj-5g-3VW"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="gdk-ub-eyQ" appends="YES" id="T0h-Q5-yX0"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.9882352941176471" green="0.81960784313725488" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,6 +261,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-112" y="525"/>
         </view>
+        <tapGestureRecognizer id="gdk-ub-eyQ">
+            <connections>
+                <action selector="didTap:" destination="-1" id="3vS-0Y-go7"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="weight-icon" width="256" height="256"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -156,6 +156,7 @@
                             </connections>
                         </button>
                     </subviews>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="5dV-gd-3zz" firstAttribute="top" secondItem="GW2-5B-yrg" secondAttribute="bottom" constant="20" id="0No-rj-EPd"/>
                         <constraint firstItem="Dn5-Ve-Mt4" firstAttribute="top" secondItem="yMc-ac-Hby" secondAttribute="bottom" constant="20" id="2aj-ZX-S8U"/>
@@ -200,6 +201,9 @@
                         <constraint firstItem="GW2-5B-yrg" firstAttribute="leading" secondItem="PsV-XL-kFn" secondAttribute="leading" id="whN-pE-yry"/>
                         <constraint firstItem="aI2-1T-VQp" firstAttribute="centerX" secondItem="sOG-86-oul" secondAttribute="centerX" id="yaK-WH-gnL"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="SKj-5b-JV5" appends="YES" id="x6K-HS-xwg"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.98823529409999999" green="0.81960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,6 +216,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
+        <tapGestureRecognizer id="SKj-5b-JV5">
+            <connections>
+                <action selector="didTap:" destination="-1" id="Hpt-CP-Zsu"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="stretch-icon" width="256" height="256"/>
