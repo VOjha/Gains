@@ -7,5 +7,6 @@ target 'Gains' do
 
   # Pods for Gains
   pod 'Charts'
+  pod 'OktaAuth', '~> 0.1'
 
 end

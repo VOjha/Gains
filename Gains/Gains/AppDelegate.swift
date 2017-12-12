@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import OktaAuth
+//import Stormpath
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,14 +22,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     exercises = Exercises()
 
-    let landingVC = LandingPageViewController()
-    let navigationController = UINavigationController(rootViewController: landingVC)
+    var rootVC: UIViewController
+
+    if (OktaAuth.tokens?.get(forKey: "accessToken")) != nil {
+      rootVC = LandingPageViewController()
+    } else {
+      rootVC = UserAuthViewController()
+    }
+
+    let navigationController = UINavigationController(rootViewController: rootVC)
     navigationController.navigationItem.hidesBackButton = false
 
     window!.rootViewController = navigationController
     window!.makeKeyAndVisible()
 
+//    Stormpath.sharedSession.configuration.APIURL = URL(string: "https://stormpathnotes.herokuapp.com")!
     return true
+  }
+
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    return OktaAuth.resume(url, options: options)
   }
 
   func applicationWillResignActive(_ application: UIApplication) {

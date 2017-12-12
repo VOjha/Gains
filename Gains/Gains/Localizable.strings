@@ -45,3 +45,14 @@
 
 // View Exercise Stats Page
 "HOME" = "Return Home";
+
+// User Auth Page
+"REGISTER" = "Register";
+"LOG_IN" = "Log In";
+
+// Registration Page
+"FIRST_NAME" = "First Name";
+"LAST_NAME" = "Last Name";
+"EMAIL" = "Email";
+"PASSWORD" = "Password";
+"CREATE_ACCOUNT" = "Create Account";

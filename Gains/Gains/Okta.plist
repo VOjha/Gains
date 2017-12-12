@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Okta.plist
+   Gains
+
+   Created by Vidushi Ojha on 12/11/17.
+   Copyright (c) 2017 Vidushi Ojha. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+      <key>issuer</key>
+      <string>https://dev-647368.oktapreview.com/oauth2/default</string>
+      <key>clientId</key>
+      <string>0oad880vpaczSD60y0h7</string>
+      <key>redirectUri</key>
+      <string>com.oktapreview.dev-647368:/callback</string>
+      <key>scopes</key>
+      <array>
+        <string>offline_access</string>
+        <string>openid</string>
+        <string>profile</string>
+      </array>
+    </dict>
+</plist>

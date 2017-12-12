@@ -41,6 +41,11 @@
 		A60A4BAC1FD61222002468F6 /* ViewExerciseStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60A4BAA1FD61222002468F6 /* ViewExerciseStatsViewController.swift */; };
 		A60A4BAD1FD61222002468F6 /* ViewExerciseStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A60A4BAB1FD61222002468F6 /* ViewExerciseStatsViewController.xib */; };
 		A64A2EB81FD8A29500CC52AC /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A2EB71FD8A29500CC52AC /* BalloonMarker.swift */; };
+		A66B7F8C1FDF0F990074B231 /* UserAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66B7F8A1FDF0F990074B231 /* UserAuthViewController.swift */; };
+		A66B7F8D1FDF0F990074B231 /* UserAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A66B7F8B1FDF0F990074B231 /* UserAuthViewController.xib */; };
+		A66B7F951FDF16B40074B231 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66B7F931FDF16B40074B231 /* RegisterViewController.swift */; };
+		A66B7F961FDF16B40074B231 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A66B7F941FDF16B40074B231 /* RegisterViewController.xib */; };
+		A66B7F981FDF37380074B231 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = A66B7F971FDF37380074B231 /* Okta.plist */; };
 		A67DFC211FCF629700625478 /* ExercisePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DFC201FCF629700625478 /* ExercisePicker.swift */; };
 		A67DFC251FCF785400625478 /* ExercisePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67DFC241FCF785400625478 /* ExercisePicker.xib */; };
 		A6CD42CD1FCCECAA0053029D /* EnterDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */; };
@@ -85,6 +90,11 @@
 		A60A4BAA1FD61222002468F6 /* ViewExerciseStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExerciseStatsViewController.swift; sourceTree = "<group>"; };
 		A60A4BAB1FD61222002468F6 /* ViewExerciseStatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewExerciseStatsViewController.xib; sourceTree = "<group>"; };
 		A64A2EB71FD8A29500CC52AC /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		A66B7F8A1FDF0F990074B231 /* UserAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthViewController.swift; sourceTree = "<group>"; };
+		A66B7F8B1FDF0F990074B231 /* UserAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAuthViewController.xib; sourceTree = "<group>"; };
+		A66B7F931FDF16B40074B231 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A66B7F941FDF16B40074B231 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		A66B7F971FDF37380074B231 /* Okta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
 		A67DFC201FCF629700625478 /* ExercisePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePicker.swift; sourceTree = "<group>"; };
 		A67DFC241FCF785400625478 /* ExercisePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExercisePicker.xib; sourceTree = "<group>"; };
 		A6CD42CB1FCCECAA0053029D /* EnterDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDataViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +154,7 @@
 			children = (
 				A64A2EB61FD8A28000CC52AC /* ChartsSupplement */,
 				A604011B1FB6502D00E2E4DF /* Info.plist */,
+				A66B7F971FDF37380074B231 /* Okta.plist */,
 				A604012C1FB66A5500E2E4DF /* Localizable.strings */,
 				A604012E1FB66DA700E2E4DF /* Helpers */,
 				A60401391FB685E300E2E4DF /* Models */,
@@ -159,14 +170,10 @@
 		A60401211FB650F800E2E4DF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A60A4BA91FD61208002468F6 /* ViewExerciseStats */,
-				A60A4BA41FD22590002468F6 /* ViewStats */,
-				A6CD42CA1FCCEC960053029D /* EnterData */,
-				A60401261FB6533400E2E4DF /* Landing */,
-				A60401271FB6533B00E2E4DF /* NewExerciseType */,
-				A60401481FBA63E300E2E4DF /* CardioExercise */,
-				A604015E1FBCEB9B00E2E4DF /* StretchExercise */,
-				A60401591FBBC4AC00E2E4DF /* WeightExercise */,
+				A66B7F911FDF16960074B231 /* User Auth Flow */,
+				A66B7F901FDF16760074B231 /* Home Pages */,
+				A66B7F8F1FDF165F0074B231 /* Entering and Viewing Data */,
+				A66B7F8E1FDF16460074B231 /* Creating New Exercise */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -293,6 +300,62 @@
 			path = ChartsSupplement;
 			sourceTree = "<group>";
 		};
+		A66B7F891FDF0F6E0074B231 /* UserAuth */ = {
+			isa = PBXGroup;
+			children = (
+				A66B7F8A1FDF0F990074B231 /* UserAuthViewController.swift */,
+				A66B7F8B1FDF0F990074B231 /* UserAuthViewController.xib */,
+			);
+			path = UserAuth;
+			sourceTree = "<group>";
+		};
+		A66B7F8E1FDF16460074B231 /* Creating New Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				A60401271FB6533B00E2E4DF /* NewExerciseType */,
+				A60401481FBA63E300E2E4DF /* CardioExercise */,
+				A604015E1FBCEB9B00E2E4DF /* StretchExercise */,
+				A60401591FBBC4AC00E2E4DF /* WeightExercise */,
+			);
+			path = "Creating New Exercise";
+			sourceTree = "<group>";
+		};
+		A66B7F8F1FDF165F0074B231 /* Entering and Viewing Data */ = {
+			isa = PBXGroup;
+			children = (
+				A60A4BA91FD61208002468F6 /* ViewExerciseStats */,
+				A60A4BA41FD22590002468F6 /* ViewStats */,
+				A6CD42CA1FCCEC960053029D /* EnterData */,
+			);
+			path = "Entering and Viewing Data";
+			sourceTree = "<group>";
+		};
+		A66B7F901FDF16760074B231 /* Home Pages */ = {
+			isa = PBXGroup;
+			children = (
+				A66B7F891FDF0F6E0074B231 /* UserAuth */,
+				A60401261FB6533400E2E4DF /* Landing */,
+			);
+			path = "Home Pages";
+			sourceTree = "<group>";
+		};
+		A66B7F911FDF16960074B231 /* User Auth Flow */ = {
+			isa = PBXGroup;
+			children = (
+				A66B7F921FDF169E0074B231 /* Register */,
+			);
+			path = "User Auth Flow";
+			sourceTree = "<group>";
+		};
+		A66B7F921FDF169E0074B231 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A66B7F931FDF16B40074B231 /* RegisterViewController.swift */,
+				A66B7F941FDF16B40074B231 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		A67DFC1E1FCF5F6500625478 /* CustomDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,10 +456,13 @@
 				A67DFC251FCF785400625478 /* ExercisePicker.xib in Resources */,
 				A604011A1FB6502D00E2E4DF /* LaunchScreen.storyboard in Resources */,
 				A6CD42CE1FCCECAA0053029D /* EnterDataViewController.xib in Resources */,
+				A66B7F8D1FDF0F990074B231 /* UserAuthViewController.xib in Resources */,
 				A60401561FBA75C100E2E4DF /* CustomDatePicker.xib in Resources */,
 				A60401171FB6502D00E2E4DF /* Assets.xcassets in Resources */,
 				A60401251FB6512700E2E4DF /* LandingPageViewController.xib in Resources */,
+				A66B7F981FDF37380074B231 /* Okta.plist in Resources */,
 				A60401361FB67EE100E2E4DF /* Rubik-Light.ttf in Resources */,
+				A66B7F961FDF16B40074B231 /* RegisterViewController.xib in Resources */,
 				A604012B1FB6535B00E2E4DF /* NewExerciseTypeViewController.xib in Resources */,
 				A604014C1FBA6E8B00E2E4DF /* Rubik-Medium.ttf in Resources */,
 			);
@@ -412,11 +478,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Gains/Pods-Gains-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/OktaAuth/OktaAuth.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OktaAuth.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,8 +534,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60401301FB66DC600E2E4DF /* LocalizationHelper.swift in Sources */,
+				A66B7F951FDF16B40074B231 /* RegisterViewController.swift in Sources */,
 				A60401611FBCEBEB00E2E4DF /* StretchExerciseViewController.swift in Sources */,
 				A60401431FBA5C0600E2E4DF /* Exercises.swift in Sources */,
+				A66B7F8C1FDF0F990074B231 /* UserAuthViewController.swift in Sources */,
 				A60401461FBA63D700E2E4DF /* CardioExerciseViewController.swift in Sources */,
 				A60401241FB6512700E2E4DF /* LandingPageViewController.swift in Sources */,
 				A60A4BA71FD225A4002468F6 /* ViewStatsViewController.swift in Sources */,
