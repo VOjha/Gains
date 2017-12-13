@@ -50,8 +50,14 @@ class RegisterViewController: UIViewController {
   }
 
   @IBAction func didClickCreateAccount(_ sender: Any) {
-//    OktaAuth
+    let url = URL(string: "https://dev-647368.oktapreview.com/api/v1/users?activate=true")
+    var request = URLRequest(url: url!)
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.setValue("application/json", forHTTPHeaderField: "Accept")
+    request.setValue("SSWS \(String(describing: OktaAuth.tokens?.accessToken))", forHTTPHeaderField: "Authorization")
+    request.httpMethod = "POST"
 
+//    let postString =
 
 //    let newUser = RegistrationModel(email: emailTextField.text!, password: passwordTextField.text!)
 //    newUser.givenName = firstNameTextField.text!

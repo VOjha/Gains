@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A66B7F911FDF16960074B231 /* User Auth Flow */,
-				A66B7F901FDF16760074B231 /* Home Pages */,
+				A66B7F901FDF16760074B231 /* Home Page */,
 				A66B7F8F1FDF165F0074B231 /* Entering and Viewing Data */,
 				A66B7F8E1FDF16460074B231 /* Creating New Exercise */,
 			);
@@ -330,18 +330,18 @@
 			path = "Entering and Viewing Data";
 			sourceTree = "<group>";
 		};
-		A66B7F901FDF16760074B231 /* Home Pages */ = {
+		A66B7F901FDF16760074B231 /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
-				A66B7F891FDF0F6E0074B231 /* UserAuth */,
 				A60401261FB6533400E2E4DF /* Landing */,
 			);
-			path = "Home Pages";
+			path = "Home Page";
 			sourceTree = "<group>";
 		};
 		A66B7F911FDF16960074B231 /* User Auth Flow */ = {
 			isa = PBXGroup;
 			children = (
+				A66B7F891FDF0F6E0074B231 /* UserAuth */,
 				A66B7F921FDF169E0074B231 /* Register */,
 			);
 			path = "User Auth Flow";
