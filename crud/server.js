@@ -80,7 +80,7 @@ app.post('/weightExercises', (req, res) => {
 
 app.put('/cardioExercises', (req, res) => {
 	db.collection('cardioExercises').findOneAndUpdate(
-		{'name': 'sasd'},
+		{'name': 'sasd'}, // ****************************************************************
 		{$set: {name: req.body.name, date: req.body.date, minutes: req.body.minutes, seconds: req.body.minutes}},
 		{sort: {_id: -1}, upsert: true},
 		(err, result) => {
@@ -91,7 +91,7 @@ app.put('/cardioExercises', (req, res) => {
 
 app.put('/stretchExercises', (req, res) => {
 	db.collection('stretchExercises').findOneAndUpdate(
-		{'name': 'sasd'},
+		{'name': 'sasd'}, // ****************************************************************
 		{$set: {name: req.body.name, date: req.body.date, sets: req.body.sets, reps: req.body.reps}},
 		{sort: {_id: -1}, upsert: true},
 		(err, result) => {
@@ -102,7 +102,7 @@ app.put('/stretchExercises', (req, res) => {
 
 app.put('/weightExercises', (req, res) => {
 	db.collection('weightExercises').findOneAndUpdate(
-		{'name': 'sasd'},
+		{'name': 'sasd'}, // ****************************************************************
 		{$set: {name: req.body.name, date: req.body.date, weight: req.body.weight, sets: req.body.sets, reps: req.body.reps}},
 		{sort: {_id: -1}, upsert: true},
 		(err, result) => {
@@ -115,7 +115,7 @@ app.put('/weightExercises', (req, res) => {
 
 app.delete('/cardioExercises', (req, res) => {
 	db.collection('cardioExercises').findOneAndDelete(
-	{name: req.body.name},
+	{name: req.body.name}, // ****************************************************************
 	(err, result) => {
 		if (err) return res.send(500, err)
 		res.send({message: 'An exercise got deleted'})
@@ -124,7 +124,7 @@ app.delete('/cardioExercises', (req, res) => {
 
 app.delete('/stretchExercises', (req, res) => {
 	db.collection('stretchExercises').findOneAndDelete(
-	{name: req.body.name},
+	{name: req.body.name}, // ****************************************************************
 	(err, result) => {
 		if (err) return res.send(500, err)
 		res.send({message: 'An exercise got deleted'})
@@ -133,7 +133,7 @@ app.delete('/stretchExercises', (req, res) => {
 
 app.delete('/weightExercises', (req, res) => {
 	db.collection('weightExercises').findOneAndDelete(
-	{name: req.body.name},
+	{name: req.body.name}, // ****************************************************************
 	(err, result) => {
 		if (err) return res.send(500, err)
 		res.send({message: 'An exercise got deleted'})

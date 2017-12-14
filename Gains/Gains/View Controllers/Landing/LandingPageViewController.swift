@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias QueryResult = (Data?, String) -> ()
+
 class LandingPageViewController: UIViewController {
 
   @IBOutlet var textItems: Array<UIView>?
@@ -17,6 +19,12 @@ class LandingPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleView()
+        makeRequest() { results, errorMessage in
+          if let results = results {
+            print("got some stuff: \(results)")
+          }
+          if !errorMessage.isEmpty { print("Search error: " + errorMessage) }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +55,34 @@ class LandingPageViewController: UIViewController {
   @IBAction func didClickEnterData(_ sender: Any) {
     let enterDataVC = EnterDataViewController()
     self.navigationController?.pushViewController(enterDataVC, animated: true)
+  }
+
+  func makeRequest(completion: @escaping QueryResult) {
+    var errorMessage =  ""
+
+    let defaultSession = URLSession(configuration: .default)
+
+    var dataTask: URLSessionDataTask?
+
+    // iTunes search, for now, because of ATS issues
+    if var urlComponents = URLComponents(string: "https://itunes.apple.com/search") {
+      urlComponents.query = "media=music&entity=song&term=weezer"
+
+      guard let url = urlComponents.url else { return }
+
+      dataTask = defaultSession.dataTask(with: url) { data, response, error in
+        defer { dataTask = nil }
+
+        if let error = error {
+          errorMessage = "DataTask error: " + error.localizedDescription
+        } else if let data = data,
+          let response = response as? HTTPURLResponse,
+          response.statusCode == 200 {
+          DispatchQueue.main.async { completion(data, errorMessage) }
+        }
+      }
+      dataTask?.resume()
+    }
   }
 
 }
