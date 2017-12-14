@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cardio Exercises</title>
+</head>
+<body>
+
+	<ul class="cardioExercises">
+		<% for(var i=0; i<cardioExercises.length; i++) {%>
+			<li class="cardioExercise">
+				<span><%= cardioExercises[i].name %></span>
+				<span><%= cardioExercises[i].date %></span>
+				<span><%= cardioExercises[i].minutes %></span>
+				<span><%= cardioExercises[i].seconds %></span>
+			</li>
+		<% } %>
+	</ul>
+
+	<form action="/cardioExercises" method="POST">
+		<input type="text" placeholder="cardio" name="name">
+		<input type="date" placeholder="2017/12/12" name="date">
+		<input type="number" placeholder="min" name="minutes">
+		<input type="number" placeholder="sec" name="seconds">
+		<button type="submit">Submit</button>
+	</form>
+
+	<div>
+		<h2>Zero out last cardio exercise</h2>
+		<button id="update">Zero!</button>
+	</div>
+
+	<div>
+		<h2>Delete latest exercise</h2>
+		<button id="delete">Delete!</button>
+	</div>
+
+<script src="main.js"></script>
+</body>
+</html>
