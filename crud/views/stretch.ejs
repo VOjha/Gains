@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Stretch Exercises</title>
+</head>
+<body>
+
+	<ul class="stretchExercises">
+		<% for(var i=0; i<stretchExercises.length; i++) {%>
+			<li class="stretchExercise">
+				<span><%= stretchExercises[i].name %></span>
+				<span><%= stretchExercises[i].date %></span>
+				<span><%= stretchExercises[i].sets %></span>
+				<span><%= stretchExercises[i].reps %></span>
+			</li>
+		<% } %>
+	</ul>
+
+	<form action="/stretchExercises" method="POST">
+		<input type="text" placeholder="stretch" name="name">
+		<input type="date" placeholder="2017/12/12" name="date">
+		<input type="number" placeholder="sets" name="sets">
+		<input type="number" placeholder="reps" name="reps">
+		<button type="submit">Submit</button>
+	</form>
+
+	<div>
+		<h2>Zero out last stretch exercise</h2>
+		<button id="update">Zero!</button>
+	</div>
+
+	<div>
+		<h2>Delete latest exercise</h2>
+		<button id="delete">Delete!</button>
+	</div>
+
+<script src="stretch-script.js"></script>
+</body>
+</html>

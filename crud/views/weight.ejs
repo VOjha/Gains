@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weight Exercises</title>
+</head>
+<body>
+
+	<ul class="weightExercises">
+		<% for(var i=0; i<weightExercises.length; i++) {%>
+			<li class="weightExercise">
+				<span><%= weightExercises[i].name %></span>
+				<span><%= weightExercises[i].date %></span>
+				<span><%= weightExercises[i].sets %></span>
+				<span><%= weightExercises[i].reps %></span>
+			</li>
+		<% } %>
+	</ul>
+
+	<form action="/weightExercises" method="POST">
+		<input type="text" placeholder="weight" name="name">
+		<input type="date" placeholder="2017/12/12" name="date">
+		<input type="number" placeholder="weight" name="weight">
+		<input type="number" placeholder="sets" name="sets">
+		<input type="number" placeholder="reps" name="reps">
+		<button type="submit">Submit</button>
+	</form>
+
+	<div>
+		<h2>Zero out last weight exercise</h2>
+		<button id="update">Zero!</button>
+	</div>
+
+	<div>
+		<h2>Delete latest exercise</h2>
+		<button id="delete">Delete!</button>
+	</div>
+
+<script src="weight-script.js"></script>
+</body>
+</html>
